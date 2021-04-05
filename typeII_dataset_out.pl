@@ -1,6 +1,6 @@
 
 open(SWISS, "<typeII.dat");
-open(WRITE,">pm.csv");
+open(WRITE,">pm.fas");
 
 $, = ",";
 $\ = "\n";
@@ -301,19 +301,25 @@ while(<SWISS>){
 
 				@temp=(0);
 
-				for($i=1;$i<=$max+15;$i++){
-					$temp[$i-1]=$sq[$i];
+				$j=0;
+				for($i=$max-15;$i<=$max+15;$i++){
+					if($i<=0||$i>=@sq){
+						$temp[$j]="X";
+					}
+					else{
+						$temp[$j]=$sq[$i];
+					}
+					$j++;
 				}
-
-				@temp=reverse @temp;
 
 				if($t2eco==250||$t2eco==269||$t2eco==303||$t2eco==305){
 					if($pmeco==250||$pmeco==269||$pmeco==305){
-						printf WRITE ">".$swissid.",".$t2eco.",".$pmeco.",".$goleco.",".$ereco.",".$nueco.",".$mteco.",".$rafteco.",".$caeco.",".$sceco."\n";
+						printf WRITE ">".$swissid.",".$t2eco.",".$pmeco.",".$goleco.",".$ereco."\n";
 						for($i=0;$i<@temp;$i++){
 							printf WRITE $temp[$i];
 						}
 						printf WRITE "\n" ;
+						unless(@temp==31){printf "error\n";}
 					}
 				}
 			}
