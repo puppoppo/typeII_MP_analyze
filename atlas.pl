@@ -258,7 +258,8 @@ while(<SWISS>){
 
 while(<alras>){
 	chomp;
-	
+	@temp=split(/\t/,$_);
+	if(grep)
 }
 
 print chr(7);	#終了時に音が鳴ります
