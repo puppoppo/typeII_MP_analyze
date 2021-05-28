@@ -1,25 +1,31 @@
 
 open(AA, "<aaindex1.dat");
-
+open(OUT, ">aaindex.csv");
 $count=0;
 $I=0;
 
+printf OUT "Hline,A,R,N,D,C,Q,E,G,H,I,L,K,M,F,P,S,T,W,Y,V\n";
+
 while(<AA>){
-	if($_ =~ /^I/){
+	if($_ =~ /^H/){
+		$Hline=substr($_,2,100);
+	}
+	elsif($_ =~ /^I/){
 		$I=1;
 	}
-	if($_ =~ /^\s\s/ && $I==1){
+	elsif($_ =~ /^\s\s/ && $I==1){
 		$value.=substr($_,0,100);
 	}
-	if($_ =~ /^\/\//){
+	elsif($_ =~ /^\/\//){
 		@index=split(/\s/,$value);
-		for($j=0;$j<@index;$j++){
-			printf $index[$j];
-		}
-		printf "\n";
+		# for($j=0;$j<@index;$j++){
+		# 	printf $index[$j];
+		# }
+		# printf "\n";
 		$count++;
 		$value="";
 		$I=0;
+
 	}
 }
 printf $count."\n";
