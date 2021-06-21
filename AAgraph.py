@@ -43,9 +43,10 @@ fas=[[]]
 while True:
     reading = er.readline()
     reading = reading.rstrip()
+    print (reading)
     if not reading.startswith('>'):
         if reading == '':
             break
-        fas=np.append(list(reading))
+        fas.append(list(reading))
 
 print([len(v) for v in fas])
