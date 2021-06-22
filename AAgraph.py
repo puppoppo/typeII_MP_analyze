@@ -36,17 +36,24 @@ columns=['A','R','N','D','C','Q','E','G','H','I','L','K','M','F','P','S','T','W'
 dataframe1=pd.DataFrame(AAall,index=ID_array,columns=columns)
 dataframe1
 
-i=0
-j=0
-fas=[[]]
+##############################################################################################
+
+fas = [[]]
 
 while True:
     reading = er.readline()
     reading = reading.rstrip()
-    print (reading)
+
     if not reading.startswith('>'):
         if reading == '':
             break
         fas.append(list(reading))
 
-print([len(v) for v in fas])
+fas.remove([])
+columns=[-15,-14,-13,-12,-11,-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+df_er=pd.DataFrame(fas,columns=columns)
+df_er
+
+###########################################################################################
+
+df_er.query('index == 0')
