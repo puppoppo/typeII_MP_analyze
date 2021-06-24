@@ -53,15 +53,31 @@ fas.remove([])
 columns=[-15,-14,-13,-12,-11,-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
 df_er=pd.DataFrame(fas,columns=columns)
 
-###########################################################################################
+##############################################################################################
+def AAindex_get(k,df_index):
+    l=0
+    value=[]
+    while l<len(df_index.columns):
+        if df_index.iat[k,l]=="NA":
+            value.append(0)
+        else:
+            value.append(float(df_index.iat[k,l]))
+        l=l+1
 
-value=[]
+        return value
+
+
+##############################################################################################
+
 k=0
 while k<len(df_index.index):
     l=0
+    value=[]
     while l<len(df_index.columns):
-        value.append(float(df_index.iat[k,l]))
-
+        if df_index.iat[k,l]=="NA":
+            value.append(0)
+        else:
+            value.append(float(df_index.iat[k,l]))
         l=l+1
 
     j=0
@@ -118,15 +134,17 @@ while k<len(df_index.index):
                     sum=sum+value[count]
                     count = count + 1
                 AA[i]=sum/20
-
-                AAnum.append(AA)
-        df_AAnum=pd.DataFrame(AAnum)
-
             i=i+1
-
-
+        AAnum.append(AA)
         j=j+1
+    df_AAnum=pd.DataFrame(AAnum)
+    print (df_AAnum)
+    #j=0
+    # while j<31
+    #     i=0
+    #     while i <
 
-    value=[]
+
+#        j=j+1
+
     k=k+1
-    break
