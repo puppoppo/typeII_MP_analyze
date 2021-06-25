@@ -128,11 +128,12 @@ while k<len(df_index.index):
             elif AA[i]=="V":
                 AA[i]=value[19]
             elif AA[i]=="X":
-                count = 0
-                sum=0
-                while count < 20:
-                    sum=sum+value[count]
-                    count = count + 1
+                # valueリストを最初の20要素のみに制限
+                initial20values = value[:20]
+
+                # その合計値を取得
+                sum = sum(initial20values)
+
                 AA[i]=sum/20
             i=i+1
         AAnum.append(AA)
