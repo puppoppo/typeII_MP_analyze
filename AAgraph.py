@@ -66,10 +66,12 @@ while k<len(df_index.index):
     l=0
     value=[]
     while l<len(df_index.columns):
-        if df_index.iat[k,l]=="NA":
-            value.append(0)
-        else:
-            value.append(float(df_index.iat[k,l]))
+        def to_be_float(str):
+            if (str == "NA"):
+                return 0
+            float(str)
+        appended_value = to_be_float(df_index.iat[k,l])
+        value.append(appended_value)
         l=l+1
 
 
