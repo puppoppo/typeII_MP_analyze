@@ -63,14 +63,9 @@ ALLave=[[]]
 
 k=0
 while k<len(df_index.index):
-    value = []
-    for l in range(df_index.columns):
-        def to_be_float(str):
-            if (str == "NA"):
-                return 0
-            float(str)
-        appended_value = to_be_float(df_index.iat[k,l])
-        value.append(appended_value)
+    def to_be_float(str):
+        return 0 if str == "NA" else float(str)
+    value = [ to_be_float(df_index.iat[k,l]) for l in range(df_index.columns)]
 
 
     j=0
