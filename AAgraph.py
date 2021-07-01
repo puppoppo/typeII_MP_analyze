@@ -64,15 +64,8 @@ while k<len(df_index.index):
             value.append(0)
         else:
             value.append(float(df_index.iat[k,l]))
-
-
-        # def to_be_float(str):
-        #     if (str == "NA"):
-        #         return 0
-        #     float(str)
-        # appended_value = to_be_float(df_index.iat[k,l])
-        # value.append(appended_value)
         l=l+1
+
 
     j=0
     AAnum=[[]]
@@ -128,8 +121,6 @@ while k<len(df_index.index):
                 # その合計値を取得
                 sumAA = sum(initial20values)
                 AA[i]=sumAA/20
-
-
 
             i=i+1
         AAnum.append(AA)
