@@ -55,6 +55,8 @@ df_er=pd.DataFrame(fas,columns=columns)
 
 ##############################################################################################
 
+ALLave=[[]]
+
 k=0
 while k<len(df_index.index):
     l=0
@@ -126,13 +128,9 @@ while k<len(df_index.index):
         AAnum.append(AA)
         j=j+1
     df_AAnum=pd.DataFrame(AAnum)
-    print (df_AAnum)
-    # j=0
-    # while j<31:
-    #     i=0
-    #     while i<len(df_AAnum.index):
-    #
-    #         i=i+1
-    #     j=j+1
+    #print (df_AAnum)
+
+    ave=df_AAnum.mean()
+    ALLave.append(ave)
 
     k=k+1
