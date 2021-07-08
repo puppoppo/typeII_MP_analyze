@@ -1,10 +1,11 @@
 
 open(SWISS, "typeII.dat");
-open(WRITE,">pm.fas");
+open(WRITE,">er_5win.fas");
 
 $, = ",";
 $\ = "\n";
 $U=0;	#配列にU,Xが含まれているかフラグ化
+$A=0;
 
 while(<SWISS>){
 	chomp;
@@ -221,7 +222,7 @@ while(<SWISS>){
 				}
 
 
-				if($t2eco!=255 && $pmeco!=0 && $pmeco!=1 && $pmeco!=255){
+				if($t2eco!=255 && $ereco!=0 && $ereco!=1 && $ereco!=255){
 
 					for($i=0;$i<@sq;$i++){
 						if($sq[$i] =~ /A/){
@@ -293,7 +294,7 @@ while(<SWISS>){
 					@hydra = (0);
 
 					for($i=0;$i<=@sq;$i++){
-						for($j=-7;$j<=7;$j++){
+						for($j=-5;$j<=5;$j++){
 							if($i+$j < 0){$hydra[$i]+= $A;} #無いところを＄A=0で置き換え
 							elsif($i+$j >= 0){$hydra[$i]+= $sq[$i+$j];}
 						}
