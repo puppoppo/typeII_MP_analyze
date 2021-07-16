@@ -1,6 +1,8 @@
+#LINE 5 , LINE 227　を変えて出力指定
+
 
 open(SWISS, "typeII.dat");
-open(WRITE,">er_5win.fas");
+open(WRITE,">nongol.fas");
 
 $, = ",";
 $\ = "\n";
@@ -222,7 +224,7 @@ while(<SWISS>){
 				}
 
 
-				if($t2eco!=255 && $ereco!=0 && $ereco!=1 && $ereco!=255){
+				if($t2eco!=255 && $goleco==0){
 
 					for($i=0;$i<@sq;$i++){
 						if($sq[$i] =~ /A/){
@@ -294,7 +296,7 @@ while(<SWISS>){
 					@hydra = (0);
 
 					for($i=0;$i<=@sq;$i++){
-						for($j=-5;$j<=5;$j++){
+						for($j=-7;$j<=7;$j++){
 							if($i+$j < 0){$hydra[$i]+= $A;} #無いところを＄A=0で置き換え
 							elsif($i+$j >= 0){$hydra[$i]+= $sq[$i+$j];}
 						}
@@ -307,7 +309,7 @@ while(<SWISS>){
 					@sq=split(//,$swisssq);
 
 					printf WRITE ">".$swissid.",".$t2eco.",".$pmeco.",".$goleco.",".$ereco."\n";
-					for($i=$max-15;$i<=$max+15;$i++){
+					for($i=$max-15;$i<=$max+25;$i++){
 						if($i<=0 || $i>=@sq){
 							printf WRITE "X";
 						}
