@@ -3,7 +3,7 @@ image: python
 
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
-  - init: pip install --upgrade pip; pip install notebook # runs during prebuild
+  - init: pip install --upgrade pip; pip install notebook pandas numpy matplotlib # runs during prebuild
   
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
 ports:
