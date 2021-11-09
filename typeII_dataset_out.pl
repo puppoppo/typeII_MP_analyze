@@ -2,7 +2,7 @@
 
 
 open(SWISS, "typeII.dat");
-open(WRITE,">nongol.fas");
+open(WRITE,">npm.fas");
 
 $, = ",";
 $\ = "\n";
@@ -224,7 +224,7 @@ while(<SWISS>){
 				}
 
 
-				if($t2eco!=255 && $goleco==0){
+				if($t2eco!=255 && $pmeco==0){
 
 					for($i=0;$i<@sq;$i++){
 						if($sq[$i] =~ /A/){
@@ -309,7 +309,7 @@ while(<SWISS>){
 					@sq=split(//,$swisssq);
 
 					printf WRITE ">".$swissid.",".$t2eco.",".$pmeco.",".$goleco.",".$ereco."\n";
-					for($i=$max-15;$i<=$max+25;$i++){
+					for($i=0;$i<@sq;$i++){
 						if($i<=0 || $i>=@sq){
 							printf WRITE "X";
 						}
