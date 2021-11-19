@@ -1,6 +1,6 @@
 
-open(fasta, "npm_98.fas");
-open(WRITE,">npm_98_Cter.fasta");
+open(fasta, "pure_gol_98.fas");
+open(WRITE,">pure_gol_98_Cter.fasta");
 
 $, = ",";
 $\ = "\n";
@@ -12,7 +12,7 @@ while(<fasta>){
 		$temp = substr($_,0,100);
 		printf WRITE $temp."\n";
 	}
-	elsif($_ =~ /^X/){
+	elsif($_ =~ /^M/){
 		$SEQUENCE=substr($_,0,10000);
 		@sq=split(//,$SEQUENCE);
 
