@@ -1,0 +1,7 @@
+pgol	teco != 255 , goleco == 269 , else == 0
+raw	
+98
+
+ngol	teco != 255 , goleco == 0
+raw	423
+98	375

@@ -1,6 +1,6 @@
 
 open(SWISS, "typeII.dat");
-open(WRITE,">pure_pm_DR.csv");
+open(WRITE,">ngol.fas");
 
 $, = ",";
 $\ = "\n";
@@ -241,7 +241,7 @@ while(<SWISS>){
 				}
 
 
-				if($t2eco!=255 && $pmeco==269 && $goleco==0 && $ereco==0 && $nueco==0 && $mteco==0 && $lysosome==0 && $lipidanchor==0){
+				if($t2eco!=255 && $pmeco==0 && $goleco==0 && $ereco==0 && $nueco==0 && $mteco==0 && $lysosome==0 && $lipidanchor==0){
 
 					for($i=0;$i<@sq;$i++){
 						if($sq[$i] =~ /A/){
@@ -325,7 +325,7 @@ while(<SWISS>){
 					@sq=();
 					@sq=split(//,$swisssq);
 
-					printf WRITE ">".$swissid.",".$t2eco.",".$pmeco.",".$goleco.",".$ereco.",".$pdb."\n";
+					printf WRITE ">".$swissid.",".$t2eco.",".$pmeco.",".$goleco.",".$ereco.","."\n";
 					# for($i=$max-25;$i<=$max+25;$i++){
 					# 	if($i<=0 || $i>=@sq){
 					# 		printf WRITE "X";
@@ -338,7 +338,6 @@ while(<SWISS>){
 					for($i=0;$i<@sq;$i++){
 						printf WRITE $sq[$i];
 					}
-
 
 					printf WRITE "\n" ;
 				}
