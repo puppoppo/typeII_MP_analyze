@@ -1,6 +1,6 @@
 
-open(fasta, "pure_gol_98.fas");
-open(WRITE,">pure_gol_98_TMR.fasta");
+open(fasta, "ngol_98.fas");
+open(WRITE,">ngol_98_TMR.fas");
 
 $, = ",";
 $\ = "\n";
