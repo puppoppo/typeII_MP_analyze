@@ -1,6 +1,6 @@
 
 open(SWISS, "typeII.dat");
-open(WRITE,">ngol.fas");
+open(WRITE,">pgol_2.fas");
 
 $, = ",";
 $\ = "\n";
@@ -241,7 +241,7 @@ while(<SWISS>){
 				}
 
 
-				if($t2eco!=255 && $pmeco==0 && $goleco==0 && $ereco==0 && $nueco==0 && $mteco==0 && $lysosome==0 && $lipidanchor==0){
+				if($t2eco!=255 && $pmeco==0 && $goleco==269 && $ereco==0 && $nueco==0 && $mteco==0 && $lysosome==0 && $lipidanchor==0){
 
 					for($i=0;$i<@sq;$i++){
 						if($sq[$i] =~ /A/){

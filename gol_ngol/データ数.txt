@@ -1,6 +1,6 @@
 pgol	teco != 255 , goleco == 269 , else == 0
-raw	
-98
+raw	43
+98	43
 
 ngol	teco != 255 , goleco == 0
 raw	423
