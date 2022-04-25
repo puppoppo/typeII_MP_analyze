@@ -108,19 +108,17 @@ while(<fasta>){
 
 
 		for($i=$start;$i<=$max;$i++){
-			for($j=-3;$j<=3;$j++){
+			for($j=-1;$j<=+1;$j++){
 				if($i+$j < 0){$hy_sum[$i]+= $A;} #無いところを＄A=0で置き換え
 				elsif($i+$j >= 0){$hy_sum[$i]+= $sq[$i+$j];}
 			}
-			if($i!=$start){
-				$hy_deff[$i]=$hy_sum[$i]-$hysum[$i-1];
-			}
-			if($hy_deff[$i]>$hy_deff[$defmax]){
-				$defmax=$i;
+			if($i>=$start-3){
+				$hy_deff[$i]=$hy_sum[$i]-$hysum[$i-3];
+				if($hy_deff[$i]>$hy_deff[$defmax]){
+					$defmax=$i;
+				}
 			}
 		}
-
-
 
 		@sq=split(//,$SEQUENCE);
 
