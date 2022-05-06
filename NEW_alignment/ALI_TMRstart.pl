@@ -1,6 +1,6 @@
 
-open(fasta, "npm_98.fas");
-open(WRITE,">ali_npm.fas");
+open(fasta, "FT269.fas");
+open(WRITE,">ali_test.fas");
 
 $, = ",";
 $\ = "\n";
@@ -85,7 +85,7 @@ while(<fasta>){
 		$max = 0;
 		@hydra = (0);
 		@hy_sum = (0);
-		$hy_deff = (0);
+		@hy_deff = (0);
 
 		for($i=0;$i<@sq;$i++){
 			for($j=-7;$j<=7;$j++){
@@ -106,13 +106,12 @@ while(<fasta>){
 
 		$defmax=$start;
 
-
-		for($i=$start;$i<=$max;$i++){
+		for($i=$start;$i<=$start+10;$i++){
 			for($j=-1;$j<=0;$j++){
 				if($i+$j < 0){$hy_sum[$i]+= $A;} #無いところを＄A=0で置き換え
 				elsif($i+$j >= 0){$hy_sum[$i]+= $sq[$i+$j];}
 			}
-			if($i>=$start-2){
+			if($i>=$start+2){
 				$hy_deff[$i]=$hy_sum[$i]-$hysum[$i-2];
 				if($hy_deff[$i]>$hy_deff[$defmax]){
 					$defmax=$i;
@@ -121,8 +120,8 @@ while(<fasta>){
 		}
 
 		@sq=split(//,$SEQUENCE);
-
-		printf WRITE $defmax.",".$max."\n";
+		$pp=$defmax-1;
+		printf WRITE $pp.",".$max."\n";
 
 		for($i=$defmax-15;$i<$defmax+15;$i++){
 			if($i<=0 || $i>=@sq){

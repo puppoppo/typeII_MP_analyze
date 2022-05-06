@@ -2,7 +2,7 @@
 
 
 open(SWISS, "typeII.dat");
-open(WRITE,">NOT_FT269.fas");
+open(WRITE,">FT269.fas");
 
 $, = ",";
 $\ = "\n";
@@ -320,17 +320,17 @@ while(<SWISS>){
 					@sq=();
 					@sq=split(//,$swisssq);
 
-          if($fteco!=269){
+          if($fteco==269){
             printf WRITE ">".$swissid.",".$t2eco.",".$pmeco.",".$goleco.",".$ereco.",".$fteco."\n";
-            # for($i=0;$i<@sq;$i++){
-            #   if($i<=0 || $i>=@sq){
-            #     printf WRITE "X";
-            #   }
-            #   else{
-            #     printf WRITE $sq[$i];
-            #   }
-            # }
-            # printf WRITE "\n" ;
+            for($i=0;$i<@sq;$i++){
+              if($i<=0 || $i>=@sq){
+                printf WRITE "X";
+              }
+              else{
+                printf WRITE $sq[$i];
+              }
+            }
+            printf WRITE "\n" ;
           }
 				}
 			}
