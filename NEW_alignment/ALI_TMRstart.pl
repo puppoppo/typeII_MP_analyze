@@ -97,8 +97,8 @@ while(<fasta>){
 			}
 		}
 
-		if($max-50>0){
-			$start=$max-50;
+		if($max-15>0){
+			$start=$max-15;
 		}
 		else{
 			$start=0;
@@ -108,12 +108,12 @@ while(<fasta>){
 
 
 		for($i=$start;$i<=$max;$i++){
-			for($j=-1;$j<=+1;$j++){
+			for($j=-1;$j<=0;$j++){
 				if($i+$j < 0){$hy_sum[$i]+= $A;} #無いところを＄A=0で置き換え
 				elsif($i+$j >= 0){$hy_sum[$i]+= $sq[$i+$j];}
 			}
-			if($i>=$start-3){
-				$hy_deff[$i]=$hy_sum[$i]-$hysum[$i-3];
+			if($i>=$start-2){
+				$hy_deff[$i]=$hy_sum[$i]-$hysum[$i-2];
 				if($hy_deff[$i]>$hy_deff[$defmax]){
 					$defmax=$i;
 				}
