@@ -112,16 +112,15 @@ while(<fasta>){
 				elsif($i+$j >= 0){$hy_sum[$i]+= $sq[$i+$j];}
 			}
 			if($i>=$start+2){
-				$hy_deff[$i]=$hy_sum[$i]-$hysum[$i-2];
+				$hy_deff[$i]=$hy_sum[$i]-$hy_sum[$i-2];
 				if($hy_deff[$i]>$hy_deff[$defmax]){
 					$defmax=$i;
 				}
 			}
 		}
 
-		@sq=split(//,$SEQUENCE);
-		$pp=$defmax-1;
-		printf WRITE $pp.",".$max."\n";
+		@sq=split(//,$SEQUENCE);;
+		printf WRITE $defmax.",".$max."\n";
 
 		for($i=$defmax-15;$i<$defmax+15;$i++){
 			if($i<=0 || $i>=@sq){
