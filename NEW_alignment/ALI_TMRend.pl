@@ -1,10 +1,9 @@
 
 open(fasta, "FT269_250.fas");
-open(WRITE,">ali_start2.fas");
+open(WRITE,">ali_end.fas");
 
 $, = ",";
 $\ = "\n";
-$A=-0.49;
 
 while(<fasta>){
 	chomp;
@@ -98,32 +97,29 @@ while(<fasta>){
 			}
 		}
 
-		if($max-15>0){
-			$start=$max-15;
-		}
-		else{
-			$start=0;
-		}
+		$start=$max+3;
 
 		$defmax=$start;
 
 		for($i=$start;$i<=$start+10;$i++){
 			for($j=-1;$j<=0;$j++){
 				if($i+$j < 0){$hy_sum[$i]+= $A;} #無いところを＄A=0で置き換え
-				elsif($i+$j >= 0){$hy_sum[$i]+= $sq[$i+$j];}
+				elsif($i+$j >= 0 || $i>=@sq){$hy_sum[$i]+= $sq[$i+$j];}
 			}
 			if($i>=$start+2){
-				$hy_deff[$i]=$hy_sum[$i]-$hy_sum[$i-2];
+				$hy_deff[$i]=-$hy_sum[$i]+$hy_sum[$i-2];
 				if($hy_deff[$i]>$hy_deff[$defmax]){
 					$defmax=$i;
 				}
 			}
 		}
 
-		@sq=split(//,$SEQUENCE);;
-		printf WRITE $defmax.",".$max."\n";
+		$pp=$defmax-1;
 
-		for($i=$defmax-15;$i<$defmax+15;$i++){
+		@sq=split(//,$SEQUENCE);;
+		printf WRITE $pp.",".$max."\n";
+
+		for($i=$defmax-1-15;$i<$defmax-1+15;$i++){
 			if($i<=0 || $i>=@sq){
 				printf WRITE "X";
 			}
