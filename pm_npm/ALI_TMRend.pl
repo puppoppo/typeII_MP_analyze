@@ -1,6 +1,6 @@
 
 open(fasta, "ppm_98.fas");
-open(WRITE,">ppm_98_TMR.fas");
+open(WRITE,">ppm_98_TMRend.fas");
 
 $, = ",";
 $\ = "\n";
@@ -84,6 +84,8 @@ while(<fasta>){
 
 		$max = 0;
 		@hydra = (0);
+		@hy_sum = (0);
+		@hy_deff = (0);
 
 		for($i=0;$i<@sq;$i++){
 			for($j=-7;$j<=7;$j++){
@@ -95,9 +97,29 @@ while(<fasta>){
 			}
 		}
 
-		@sq=split(//,$SEQUENCE);
+		$start=$max+3;
 
-		for($i=$max-25;$i<$max+26;$i++){
+		$defmax=$start;
+
+		for($i=$start;$i<=$start+10;$i++){
+			for($j=-1;$j<=0;$j++){
+				if($i+$j < 0){$hy_sum[$i]+= $A;} #無いところを＄A=0で置き換え
+				elsif($i+$j >= 0 || $i>=@sq){$hy_sum[$i]+= $sq[$i+$j];}
+			}
+			if($i>=$start+2){
+				$hy_deff[$i]=-$hy_sum[$i]+$hy_sum[$i-2];
+				if($hy_deff[$i]>$hy_deff[$defmax]){
+					$defmax=$i;
+				}
+			}
+		}
+
+		$pp=$defmax-1;
+
+		@sq=split(//,$SEQUENCE);;
+		printf WRITE $pp.",".$max."\n";
+
+		for($i=$defmax-1-15;$i<$defmax-1+15;$i++){
 			if($i<=0 || $i>=@sq){
 				printf WRITE "X";
 			}
