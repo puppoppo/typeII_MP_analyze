@@ -1,0 +1,96 @@
+ALLave=[[]]
+npm_variance=[[]]
+
+k=0
+while k<len(df_index.index):
+    l=0
+    value=[]
+    NAcount=0
+
+    while l<len(df_index.columns):
+        if df_index.iat[k,l]=="NA":
+            NAcount=1
+            value.append('NA')
+        else:
+            value.append(float(df_index.iat[k,l]))
+        l=l+1
+
+    if NAcount==0:
+        j=0
+        AAnum=[[]]
+        while j<len(df_npm.index):
+            i=0
+            AA=[]
+            while i<=50:
+                AA.append(df_npm.iat[j,i])
+                if AA[i]=="A":
+                    AA[i]=value[0]
+                elif AA[i]=="R":
+                    AA[i]=value[1]
+                elif AA[i]=="N":
+                    AA[i]=value[2]
+                elif AA[i]=="D":
+                    AA[i]=value[3]
+                elif AA[i]=="C":
+                    AA[i]=value[4]
+                elif AA[i]=="Q":
+                    AA[i]=value[5]
+                elif AA[i]=="E":
+                    AA[i]=value[6]
+                elif AA[i]=="G":
+                    AA[i]=value[7]
+                elif AA[i]=="H":
+                    AA[i]=value[8]
+                elif AA[i]=="I":
+                    AA[i]=value[9]
+                elif AA[i]=="L":
+                    AA[i]=value[10]
+                elif AA[i]=="K":
+                    AA[i]=value[11]
+                elif AA[i]=="M":
+                    AA[i]=value[12]
+                elif AA[i]=="F":
+                    AA[i]=value[13]
+                elif AA[i]=="P":
+                    AA[i]=value[14]
+                elif AA[i]=="S":
+                    AA[i]=value[15]
+                elif AA[i]=="T":
+                    AA[i]=value[16]
+                elif AA[i]=="W":
+                    AA[i]=value[17]
+                elif AA[i]=="Y":
+                    AA[i]=value[18]
+                elif AA[i]=="V":
+                    AA[i]=value[19]
+                elif AA[i]=="X":
+                    AA[i]=np.nan
+                i=i+1
+            AAnum.append(AA)
+            j=j+1
+    df_AAnum=pd.DataFrame(AAnum)
+    sum=df_AAnum.sum()
+    npm_data_number=df_AAnum.count()
+    ave=[]
+    j=0
+    variance=0
+    vari_array=[]
+    while j<=48:
+        temp=sum[j]+sum[j+1]+sum[j+2]
+        temp=temp/(npm_data_number[j]+npm_data_number[j+1]+npm_data_number[j+2])
+        ave.append(temp)
+        i=0
+        variance=0
+        while i<len(df_AAnum.index):
+            l=0
+            while l<3:
+                if not np.isnan(df_AAnum.iat[i,j+l]):
+                    variance = variance+(df_AAnum.iat[i,j+l]-temp)**2
+                l=l+1
+            i=i+1
+        variance=variance/(npm_data_number[j]+npm_data_number[j+1]+npm_data_number[j+2])
+        vari_array.append(variance)
+        j=j+1
+    ALLave.append(ave)
+    npm_variance.append(vari_array)
+    k=k+1

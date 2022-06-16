@@ -19,7 +19,7 @@ EditBox.insert(tkinter.END,file_dir)
 EditBox.pack()
 EditBox.place(x=15, y=15)
 
-sansho=tkinter.Button(text=u'参照',command=sanshofn(file_dir))
+sansho=tkinter.Button(text=u'参照',command=lambda:sanshofn(file_dir))
 sansho.pack()
 sansho.place(x=480, y=10)
 
