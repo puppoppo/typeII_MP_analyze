@@ -117,9 +117,9 @@ while(<fasta>){
 		$pp=$defmax-1;
 
 		@sq=split(//,$SEQUENCE);;
-		printf WRITE $pp.",".$max."\n";
+		# printf WRITE $pp.",".$max."\n";
 
-		for($i=$defmax-1-15;$i<$defmax-1+15;$i++){
+		for($i=$defmax-1-25;$i<=$defmax-1+25;$i++){
 			if($i<=0 || $i>=@sq){
 				printf WRITE "X";
 			}

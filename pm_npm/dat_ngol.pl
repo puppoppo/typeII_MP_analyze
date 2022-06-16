@@ -1,6 +1,6 @@
 
 open(SWISS, "typeII.dat");
-open(WRITE,">ngol.fas");
+open(WRITE,">npm.fas");
 
 $, = ",";
 $\ = "\n";
@@ -241,7 +241,7 @@ while(<SWISS>){
 				}
 
 
-				if($t2eco!=255 && $goleco==0){
+				if($t2eco!=255 && $pmeco==0){
 
 					for($i=0;$i<@sq;$i++){
 						if($sq[$i] =~ /A/){
