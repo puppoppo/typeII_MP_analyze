@@ -1,6 +1,6 @@
 
-open(fasta, "ppm_98.fas");
-open(WRITE,">ppm_98_TMR.fas");
+open(fasta, "npm_98.fas");
+open(WRITE,">npm_98_TMR.fas");
 
 $, = ",";
 $\ = "\n";

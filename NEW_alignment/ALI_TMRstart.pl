@@ -90,7 +90,7 @@ while(<fasta>){
 
 		for($i=0;$i<@sq;$i++){
 			for($j=-7;$j<=7;$j++){
-				if($i+$j < 0){$hydra[$i]+= $A;} #無いところを＄A=0で置き換え
+				if($i+$j < 0){$hydra[$i]+= $A;} #無いところを＄A=-0.49(全アミノ酸の平均値)で置き換え
 				elsif($i+$j >= 0){$hydra[$i]+= $sq[$i+$j];}
 			}
 			if($hydra[$max]<$hydra[$i]){
@@ -109,7 +109,7 @@ while(<fasta>){
 
 		for($i=$start;$i<=$start+10;$i++){
 			for($j=-1;$j<=0;$j++){
-				if($i+$j < 0){$hy_sum[$i]+= $A;} #無いところを＄A=0で置き換え
+				if($i+$j < 0){$hy_sum[$i]+= $A;} #無いところを＄A=-0.49で置き換え
 				elsif($i+$j >= 0){$hy_sum[$i]+= $sq[$i+$j];}
 			}
 			if($i>=$start+2){
