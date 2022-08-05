@@ -1,6 +1,6 @@
 
-open(fasta, "ppm_98.fas");
-open(WRITE,">ppm_98_TMRstart.fas");
+open(fasta, "npm_98.fas");
+open(WRITE,">npm_98_TMRstart.fas");
 
 $, = ",";
 $\ = "\n";
@@ -123,7 +123,7 @@ while(<fasta>){
 		@sq=split(//,$SEQUENCE);;
 		# printf WRITE $defmax.",".$max."\n";
 
-		for($i=$defmax-25;$i<=$defmax+25;$i++){
+		for($i=$defmax-1-25;$i<=$defmax-1+25;$i++){
 			if($i<=0 || $i>=@sq){
 				printf WRITE "X";
 			}
