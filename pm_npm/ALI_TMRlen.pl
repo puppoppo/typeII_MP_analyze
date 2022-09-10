@@ -16,67 +16,68 @@ while(<fasta>){
 	elsif($_ =~ /^M/){
 		$SEQUENCE=substr($_,0,10000);
 		@sq=split(//,$SEQUENCE);
+		@sqnum=();
 
 		for($i=0;$i<@sq;$i++){
 			if($sq[$i] =~ /A/){
-				$sq[$i] = 1.8;
+				$sqnum[$i] = 1.8;
 			}
 			elsif($sq[$i] =~ /C/){
-				$sq[$i]=2.5;
+				$sqnum[$i]=2.5;
 			}
 			elsif($sq[$i] =~ /D/){
-				$sq[$i]=-3.5;
+				$sqnum[$i]=-3.5;
 			}
 			elsif($sq[$i] =~ /E/){
-				$sq[$i]=-3.5;
+				$sqnum[$i]=-3.5;
 			}
 			elsif($sq[$i] =~ /F/){
-				$sq[$i]=2.8;
+				$sqnum[$i]=2.8;
 			}
 			elsif($sq[$i] =~ /G/){
-				$sq[$i] = -0.4;
+				$sqnum[$i] = -0.4;
 			}
 			elsif($sq[$i] =~ /H/){
-				$sq[$i]=-3.2;
+				$sqnum[$i]=-3.2;
 			}
 			elsif($sq[$i] =~ /I/){
-				$sq[$i]=4.5;
+				$sqnum[$i]=4.5;
 			}
 			elsif($sq[$i] =~ /K/){
-				$sq[$i]=-3.9;
+				$sqnum[$i]=-3.9;
 			}
 			elsif($sq[$i] =~ /L/){
-				$sq[$i]=3.8;
+				$sqnum[$i]=3.8;
 			}
 			elsif($sq[$i] =~ /M/){
-				$sq[$i]=1.9;
+				$sqnum[$i]=1.9;
 			}
 			elsif($sq[$i] =~ /N/){
-				$sq[$i]=-3.5;
+				$sqnum[$i]=-3.5;
 			}
 			elsif($sq[$i] =~ /P/){
-				$sq[$i]=-1.6;
+				$sqnum[$i]=-1.6;
 			}
 			elsif($sq[$i] =~ /Q/){
-				$sq[$i]=-3.5;
+				$sqnum[$i]=-3.5;
 			}
 			elsif($sq[$i] =~ /R/){
-				$sq[$i]=-4.5;
+				$sqnum[$i]=-4.5;
 			}
 			elsif($sq[$i] =~ /S/){
-				$sq[$i]=-0.8;
+				$sqnum[$i]=-0.8;
 			}
 			elsif($sq[$i] =~ /T/){
-				$sq[$i]=-0.7;
+				$sqnum[$i]=-0.7;
 			}
 			elsif($sq[$i] =~ /V/){
-				$sq[$i]=4.2;
+				$sqnum[$i]=4.2;
 			}
 			elsif($sq[$i] =~ /W/){
-				$sq[$i]=-0.9;
+				$sqnum[$i]=-0.9;
 			}
 			elsif($sq[$i] =~ /Y/){
-				$sq[$i]=-1.3;
+				$sqnum[$i]=-1.3;
 			}
 			else{
 				printf "error" . $temp . $i. "\n";
@@ -89,10 +90,10 @@ while(<fasta>){
 		@hy_deff = (0);
 
 
-		for($i=0;$i<@sq;$i++){
+		for($i=0;$i<@sqnum;$i++){
 			for($j=-7;$j<=7;$j++){
 				if($i+$j < 0){$hydra[$i]+= $A;} #無いところを＄A=0で置き換え
-				elsif($i+$j >= 0){$hydra[$i]+= $sq[$i+$j];}
+				elsif($i+$j >= 0){$hydra[$i]+= $sqnum[$i+$j];}
 			}
 			if($hydra[$max]<$hydra[$i]){
 				$max=$i;
@@ -111,7 +112,7 @@ while(<fasta>){
 		for($i=$start;$i<=$start+10;$i++){
 			for($j=-1;$j<=0;$j++){
 				if($i+$j < 0){$hy_sum[$i]+= $A;} #無いところを＄A=0で置き換え
-				elsif($i+$j >= 0){$hy_sum[$i]+= $sq[$i+$j];}
+				elsif($i+$j >= 0){$hy_sum[$i]+= $sqnum[$i+$j];}
 			}
 			if($i>=$start+2){
 				$hy_deff[$i]=$hy_sum[$i]-$hy_sum[$i-2];
@@ -124,7 +125,7 @@ while(<fasta>){
 		@sq=split(//,$SEQUENCE);;
 		# printf WRITE $defmax.",".$max."\n";
 
-		$TMRstart=$defmax-1;
+		$TMRstart=$defmax;
 
 		$start=$max+3;
 
@@ -133,7 +134,7 @@ while(<fasta>){
 		for($i=$start;$i<=$start+10;$i++){
 			for($j=-1;$j<=0;$j++){
 				if($i+$j < 0){$hy_sum[$i]+= $A;} #無いところを＄A=0で置き換え
-				elsif($i+$j >= 0 || $i>=@sq){$hy_sum[$i]+= $sq[$i+$j];}
+				elsif($i+$j >= 0 || $i>=@sqnum){$hy_sum[$i]+= $sqnum[$i+$j];}
 			}
 			if($i>=$start+2){
 				$hy_deff[$i]=-$hy_sum[$i]+$hy_sum[$i-2];
@@ -143,10 +144,16 @@ while(<fasta>){
 			}
 		}
 
-		$TMRend=$defmax-2;
+		$TMRend=$defmax-1;
 
-		printf WRITE $TMRstart. "," . $TMRend."\n";
+		$TMRlen=$TMRend-$TMRstart;
 
+		printf WRITE $TMRstart . "," . $TMRend . "," . $TMRlen . "\n";
+
+		for($i=$TMRstart-5;$i<=$TMRend+5;$i++){
+			printf WRITE $sq[$i] . ",";
+		}
+		printf WRITE "\n";
 	}
 }
 print chr(7);	#終了時に音が鳴ります
