@@ -323,7 +323,7 @@ while(<SWISS>){
           if($fteco==269){
             printf WRITE ">".$swissid.",".$t2eco.",".$pmeco.",".$goleco.",".$ereco.",".$fteco."\n";
             for($i=0;$i<@sq;$i++){
-              if($i<=0 || $i>=@sq){
+              if($i<0 || $i>=@sq){
                 printf WRITE "X";
               }
               else{
