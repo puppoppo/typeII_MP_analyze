@@ -1,22 +1,21 @@
 
-open(fasta, "FT269.fas");
-open(WRITE,">ali_test313.fas");
+open(fasta, "FT269_fusion.fas");
+open(WRITE,">FT269_505.csv");
 
 $, = ",";
 $\ = "\n";
 $A=-0.49;
-$N=3;
-$M=1;
-$O=3;
+$N=5;
+$M=0;
+$O=5;
 
 while(<fasta>){
 	chomp;
 
 	if($_ =~ /^>/){
 		$temp = substr($_,0,100);
-		printf WRITE $temp."\n";
 	}
-	elsif($_ =~ /^X/){
+	else{
 		$SEQUENCE=substr($_,0,10000);
 		@sq=split(//,$SEQUENCE);
 
@@ -126,24 +125,24 @@ while(<fasta>){
 		}
 
 		for($i=$start;$i<=$start+25-$N-$M;$i++){
-			$hy_deff[$i] = -$hy_N[$i]+$hy_O[$i+$N+$O];
+			$hy_deff[$i] = -$hy_N[$i]+$hy_O[$i+$N+$M];
 			if($hy_deff[$i]>$hy_deff[$defmax]){
 				$defmax=$i;
 			}
 		}
 
 		$Nend=$defmax+$N;
-		$Ostart=$defmax+$N+$O+1;
+		$Ostart=$defmax+$N+$M+1;
 
-		@sq=split(//,$SEQUENCE);;
-		printf WRITE $Nend.",". $Ostart .",".$max."\n";
+		@sq=split(//,$SEQUENCE);
+		printf WRITE $temp.",".$Nend.",". $Ostart .",".$max."\n";
 
 		for($i=$Nend-15;$i<=$Ostart+15;$i++){
 			if($i<=0 || $i>=@sq){
-				printf WRITE "X";
+				printf WRITE "X,";
 			}
 			else{
-				printf WRITE $sq[$i];
+				printf WRITE $sq[$i].",";
 			}
 		}
 
