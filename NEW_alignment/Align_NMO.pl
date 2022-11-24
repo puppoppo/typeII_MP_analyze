@@ -85,6 +85,12 @@ while(<fasta>){
 			}
 		}
 
+		for($N=2;$N<=5;$N++){
+			for($O=2;$O<=5;$O++){
+				
+			}
+		}
+
 		$max = 0;
 		@hydra = (0);
 		@hy_N = (0);
@@ -131,8 +137,8 @@ while(<fasta>){
 			}
 		}
 
-		$Nend=$defmax+$N;
-		$Ostart=$defmax+$N+$M+1;
+		$Nend=$defmax+$N-1;
+		$Ostart=$defmax+$N+$M;
 
 		@sq=split(//,$SEQUENCE);
 		printf WRITE $temp.",".$Nend.",". $Ostart .",".$max."\n";
