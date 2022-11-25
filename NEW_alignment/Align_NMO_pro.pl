@@ -1,6 +1,6 @@
 
 open(fasta, "FT269_fusion.fas");
-open(WRITE,">FT269_pro_end.csv");
+open(WRITE,">FT269_pro.csv");
 
 $, = ",";
 $\ = "\n";
@@ -104,8 +104,8 @@ while(<fasta>){
 					}
 				}
 
-				if($max-5>0){
-					$start=$max-5; #start:-20 end:-5
+				if($max-20>0){
+					$start=$max-20; #start:-20 end:-5
 				}
 				else{
 					$start=0;
@@ -136,7 +136,7 @@ while(<fasta>){
 				}
 
 				for($i=$start;$i<=$start+25-$N-$M;$i++){
-					$hy_deff[$i] = $hy_N[$i]-$hy_O[$i+$N+$M];	#startとendで符号変化
+					$hy_deff[$i] = -$hy_N[$i]+$hy_O[$i+$N+$M];	#startとendで符号変化
 					if($hy_deff[$i]>$hy_deff[$defmax]){
 						$defmax=$i;
 					}
@@ -145,7 +145,7 @@ while(<fasta>){
 				$Nend=$defmax+$N-1;
 				$Ostart=$defmax+$N+$M;
 
-				printf WRITE $Nend.",".$Ostart.",".$N.$M.$O.",".$hy_deff[$defmax].",";
+				printf WRITE $Nend.",".$Ostart.",".$N.$M.$O.",".$max.",".$hy_deff[$defmax].",";
 
 				for($i=$Nend-15;$i<=$Ostart+15;$i++){
 					if($i<=0 || $i>=@sq){
