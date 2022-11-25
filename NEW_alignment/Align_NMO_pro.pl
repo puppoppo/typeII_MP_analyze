@@ -104,8 +104,8 @@ while(<fasta>){
 					}
 				}
 
-				if($max-20>0){
-					$start=$max-20;
+				if($max-5>0){
+					$start=$max-5; #start:-20 end:-5
 				}
 				else{
 					$start=0;
