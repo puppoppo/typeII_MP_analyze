@@ -136,7 +136,7 @@ while(<fasta>){
 				}
 
 				for($i=$start;$i<=$start+25-$N-$M;$i++){
-					$hy_deff[$i] = -$hy_N[$i]+$hy_O[$i+$N+$M];	#startとendで符号変化
+					$hy_deff[$i] = -$hy_N[$i]+$hy_O[$i+$N+$M];	#startとendで符号変化 start -N, end +N 
 					if($hy_deff[$i]>$hy_deff[$defmax]){
 						$defmax=$i;
 					}
