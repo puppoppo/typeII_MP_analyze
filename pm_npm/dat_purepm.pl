@@ -1,6 +1,6 @@
 
 open(SWISS, "typeII.dat");
-open(WRITE,">ppm.fas");
+open(WRITE,">ppmtest.fas");
 
 $, = ",";
 $\ = "\n";
@@ -46,6 +46,9 @@ while(<SWISS>){
 		$TMRend =  int($TMRregion[1]);
 		$TMRregion = (0);
 		$ftswitch = 1;
+	}
+	elsif($_ =~/^FT   INTRAMEM/){
+		$frag=1;
 	}
 	elsif($_ =~ /^FT       / && $ftswitch>=1 && $ftswitch < 3 ){	#FT TRANSMEM行の後ろ2行をfteviに格納
 		$ftevi .= substr($_,21,100);
@@ -220,20 +223,6 @@ while(<SWISS>){
 						elsif($su[$i] =~ /ECO:0000213/){$sceco=213;}
 						else{$sceco=1;}
 					}
-					if($note==0 && $su[$i] =~ /Secreted/){
-						if($su[$i] =~ /ECO:0000269/){$sceco=269;}
-						elsif($su[$i] =~ /ECO:0000303/){$sceco=303;}
-						elsif($su[$i] =~ /ECO:0000305/){$sceco=305;}
-						elsif($su[$i] =~ /ECO:0000250/){$sceco=250;}
-						elsif($su[$i] =~ /ECO:0000255/){$sceco=255;}
-						elsif($su[$i] =~ /ECO:0000256/){$sceco=256;}
-						elsif($su[$i] =~ /ECO:0000259/){$sceco=259;}
-						elsif($su[$i] =~ /ECO:0000312/){$sceco=312;}
-						elsif($su[$i] =~ /ECO:0000313/){$sceco=313;}
-						elsif($su[$i] =~ /ECO:0000244/){$sceco=244;}
-						elsif($su[$i] =~ /ECO:0000213/){$sceco=213;}
-						else{$sceco=1;}
-					}
 					if($swisssu =~ /isoform|Isoform/){$iso=1;}
 					if($swisssu =~ /lysosome|Lysosome/){$lysosome=1;}
 					if($swisssu =~ /melanosome|Melanosome/){$melanosome=1;}
@@ -241,8 +230,9 @@ while(<SWISS>){
 				}
 
 
-				if($t2eco!=255 && $pmeco==0 && $goleco==0 && $ereco==0 && $nueco==0 && $mteco==0 && $lysosome==0 && $lipidanchor==0){
-
+				if($t2eco!=255 && $pmeco==0){
+#$pmeco==269 && $goleco==0 && $ereco==0 && $nueco==0 && $mteco==0 && $lysosome==0 && $lipidanchor==0
+#$pmeco==0
 					for($i=0;$i<@sq;$i++){
 						if($sq[$i] =~ /A/){
 							$sq[$i] = 1.8;
@@ -322,24 +312,30 @@ while(<SWISS>){
 						}
 					}
 
+					$boader=0;
+					$NG=0;
+
+					$boader=$hydra[$max]*0.9;	#ピークの90％（要検討）をボーダーとする
+					for($i=0;$i<@sq;$i++){
+						if($hydra[$i]>$boader){
+							if($i<$max-20 || $i>$max+20){
+								$NG=1;
+							}
+						}
+					}
+
 					@sq=();
 					@sq=split(//,$swisssq);
 
-					printf WRITE ">".$swissid.",".$t2eco.",".$pmeco.",".$goleco.",".$ereco.","."\n";
-					# for($i=$max-25;$i<=$max+25;$i++){
-					# 	if($i<=0 || $i>=@sq){
-					# 		printf WRITE "X";
-					# 	}
-					# 	else{
-					# 		printf WRITE $sq[$i],",";
-					# 	}
-					# }
+					if($NG==0){
+						printf WRITE ">".$swissid.",".$t2eco.",".$pmeco.",".$goleco.",".$ereco.","."\n";
+						for($i=0;$i<@sq;$i++){
+							printf WRITE $sq[$i];
+						}
 
-					for($i=0;$i<@sq;$i++){
-						printf WRITE $sq[$i];
+						printf WRITE "\n" ;
+
 					}
-
-					printf WRITE "\n" ;
 				}
 			}
 		}
