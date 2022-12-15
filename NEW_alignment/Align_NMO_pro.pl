@@ -87,57 +87,60 @@ while(<fasta>){
 
 		printf WRITE $temp."\n";
 
+		@hydra=();
+		$max=0;
 
+		for($i=0;$i<@sqn;$i++){
+			for($j=-7;$j<=7;$j++){
+				if($i+$j < 0){$hydra[$i]+= $A;} #無いところを＄A=-0.49(全アミノ酸の平均値)で置き換え
+				elsif($i+$j >= 0){$hydra[$i]+= $sqn[$i+$j];}
+			}
+			if($hydra[$max]<$hydra[$i]){
+				$max=$i;
+			}
+		}
+
+		if($max-20>0){
+			$start=$max-20; #start:-20 end:-5
+		}
+		else{
+			$start=0;
+		}
+
+		@hy_info=((["hy_def","N","O","Nend"]));
 
 		for($N=2;$N<=5;$N++){
 			for($O=2;$O<=5;$O++){
-				@hydra=();
-				$max=0;
-
-				for($i=0;$i<@sqn;$i++){
-					for($j=-7;$j<=7;$j++){
-						if($i+$j < 0){$hydra[$i]+= $A;} #無いところを＄A=-0.49(全アミノ酸の平均値)で置き換え
-						elsif($i+$j >= 0){$hydra[$i]+= $sqn[$i+$j];}
-					}
-					if($hydra[$max]<$hydra[$i]){
-						$max=$i;
-					}
-				}
-
-				if($max-20>0){
-					$start=$max-20; #start:-20 end:-5
-				}
-				else{
-					$start=0;
-				}
-
 
 				my @hy_N=();
 				my @hy_M=();
-				my @hy_deff=();
+				my @hy_def=();
 				my $defmax=0;
 				$Nend=0;
 				$Ostart=0;
-
 				$defmax=$start;
 
 				for($i=$start;$i<=$start+25;$i++){
+
 					for($j=0;$j<$N;$j++){
 						if($i+$j < 0){$hy_N[$i]+= $A;} #無いところを＄A=-0.49で置き換え
 						elsif($i+$j >= 0){$hy_N[$i]+= $sqn[$i+$j];}
 					}
+
 					$hy_N[$i]=$hy_N[$i]/$N;
 
 					for($j=0;$j<$O;$j++){
 						if($i+$j < 0){$hy_O[$i]+= $A;} #無いところを＄A=-0.49で置き換え
 						elsif($i+$j >= 0){$hy_O[$i]+= $sqn[$i+$j];}
 					}
+
 					$hy_O[$i]=$hy_O[$i]/$O;
+
 				}
 
 				for($i=$start;$i<=$start+25-$N-$M;$i++){
-					$hy_deff[$i] = -$hy_N[$i]+$hy_O[$i+$N+$M];	#startとendで符号変化 start -N, end +N 
-					if($hy_deff[$i]>$hy_deff[$defmax]){
+					$hy_def[$i] = -$hy_N[$i]+$hy_O[$i+$N+$M];	#startとendで符号変化 start -N, end +N
+					if($hy_def[$i]>$hy_def[$defmax]){
 						$defmax=$i;
 					}
 				}
@@ -145,21 +148,33 @@ while(<fasta>){
 				$Nend=$defmax+$N-1;
 				$Ostart=$defmax+$N+$M;
 
-				printf WRITE $Nend.",".$Ostart.",".$N.$M.$O.",".$max.",".$hy_deff[$defmax].",";
+				# printf WRITE $Nend.",".$Ostart.",".$N.$M.$O.",".$max.",".$hy_deff[$defmax].",";
+				#
+				# for($i=$Nend-15;$i<=$Ostart+15;$i++){
+				# 	if($i<=0 || $i>=@sq){
+				# 		printf WRITE "X,";
+				# 	}
+				# 	else{
+				# 		printf WRITE $sq[$i].",";
+				# 	}
+				# }
+				# printf WRITE "\n";
+				push (@hy_info,([$hy_def[$defmax],$N,$O,$Nend]));
 
-				for($i=$Nend-15;$i<=$Ostart+15;$i++){
-					if($i<=0 || $i>=@sq){
-						printf WRITE "X,";
-					}
-					else{
-						printf WRITE $sq[$i].",";
-					}
-				}
-				printf WRITE "\n";
 			}
 		}
 
-		printf WRITE "\n";
+		@delete=shift @hy_info;
+
+		@hy_info = sort{$b->[0] <=> $a->[0]} @hy_info;
+
+		for($k=0;$k<16;$k++){
+			for($l=0;$l<4;$l++){
+				printf WRITE $hy_info[$k][$l].",";
+			}
+			printf WRITE "\n";
+		}
+
 
 	}
 }
