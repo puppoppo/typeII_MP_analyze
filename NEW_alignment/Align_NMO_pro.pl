@@ -1,5 +1,5 @@
 
-open(fasta, "FT269_250.fas");
+open(fasta, "npm_98.fas");
 open(WRITE,">NAproto.csv");
 
 $, = ",";
