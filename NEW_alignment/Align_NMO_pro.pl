@@ -1,6 +1,6 @@
 
-open(fasta, "npm_98.fas");
-open(WRITE,">FT269_pro2.csv");
+open(fasta, "FT269_250.fas");
+open(WRITE,">NAproto.csv");
 
 $, = ",";
 $\ = "\n";
@@ -14,7 +14,7 @@ while(<fasta>){
 	if($_ =~ /^>/){
 		$temp = substr($_,0,100);
 	}
-	elsif($_ =~ /^X/){
+	elsif($_ =~ /^X/ || $_ =~ /^M/ ){
 		$SEQUENCE=substr($_,0,10000);
 		@sq=split(//,$SEQUENCE);
 		@sqn=();
@@ -152,7 +152,6 @@ while(<fasta>){
 			}
 		}
 
-		printf WRITE $temp."\n";
 
 		@hydra=();
 		$max=0;
@@ -223,6 +222,8 @@ while(<fasta>){
 				}
 				$AmphiScore=$AmphiScore/($N+$O);
 
+				##AmphiScoreは移動平均範囲　or Nend-2 ~ Nend+3に固定でもよいかも
+
 				$Nend=$defmax+$N-1;
 
 				push (@hy_info,([$hy_def[$defmax],$N,$O,$Nend,$AmphiScore]));
@@ -234,12 +235,12 @@ while(<fasta>){
 
 		@hy_info = sort{$b->[0] <=> $a->[0]} @hy_info;
 
-		for($k=0;$k<3;$k++){
-			for($l=0;$l<5;$l++){
-				printf WRITE $hy_info[$k][$l].",";
-			}
-			printf WRITE "\n";
-		}
+		# for($k=0;$k<3;$k++){
+		# 	for($l=0;$l<5;$l++){
+		# 		printf WRITE $hy_info[$k][$l].",";
+		# 	}
+		# 	printf WRITE "\n";
+		# }
 
 		$certainly=0;
 
@@ -260,8 +261,8 @@ while(<fasta>){
 			}
 		}
 
-		if($certainly==0){#Amphi1位と2位が一致
-			if($hy_info[1][4] != $hy_info[2][4]){	#Amphi2位と3位が不一致　1位か2位から選択
+		if($certainly==0){#1Am==2Am
+			if($hy_info[1][4] != $hy_info[2][4]){	#2Am!=3Am
 				if($hy_info[0][3] == $hy_info[1][3]){
 					$certainly = 2;
 					$Nend=$hy_info[0][3];
@@ -271,28 +272,66 @@ while(<fasta>){
 						$Nend=$hy_info[0][3];
 					}elsif($hy_info[0][0]<$hy_info[1][0]){
 						$certainly = 3;
+						$Nend=$hy_info[1][3];
+					}else{
+						if($hy_info[0][3]<=$hy_info[1][3]){
+							$certainly=4;
+							$Nend=$hy_info[0][3];
+						}else{
+							$certainly=4;
+							$Nend=$hy_info[1][3];
+						}
+					}
+				}
+			}elsif($hy_info[1][4]==$hy_info[2][4]){	#2Am==3Am
+				@hy_info = sort{$b->[0] <=> $a->[0]} @hy_info;
+				if($hy_info[0][3]==$hy_info[1][3] && $hy_info[0][3]==$hy_info[2][3]){
+					$certainly=2;
+					$Nend=$hy_info[0][3];
+				}elsif($hy_info[0][0]!=$hy_info[1][0]){
+					$certainly=3;
+					$Nend=$hy_info[0][3];
+				}else{
+					if($hy_info[1][0]!=$hy_info[2][0]){
+						if($hy_info[0][3]==$hy_info[1][3]){
+							$certainly=3;
+							$Nend=$hy_info[0][3];
+						}else{
+							$certainly=4;
+							if($hy_info[0][3]<=$hy_info[1][3]){
+								$Nend=$hy_info[0][3];
+							}else{
+								$Nend=$hy_info[1][3];
+							}
+						}
+					}else{
+						@hy_info = sort{$a->[3] <=> $b->[3]} @hy_info;
+						$certainly=4;
 						$Nend=$hy_info[0][3];
 					}
 				}
 			}
 		}
 
-
-		$Nendmin=$hy_info[0][3];
-		$Nendmax=$hy_info[0][3];
-
-		for($k=1;$k<3;$k++){
-			if($Nendmax < $hy_info[$k][3]){
-				$Nendmax=$hy_info[$k][3];
-			}
-			if($Nendmin > $hy_info[$k][3]){
-				$Nendmin=$hy_info[$k][3];
-			}
+		if($certainly==0){
+			$Nend="erorr";
 		}
-		if($certainly!=1){
-			printf WRITE ",,,,,";
 
-			for($i=$Nendmin-15;$i<=$Nendmax+35;$i++){
+		# $Nendmin=$hy_info[0][3];
+		# $Nendmax=$hy_info[0][3];
+		#
+		# for($k=1;$k<3;$k++){
+		# 	if($Nendmax < $hy_info[$k][3]){
+		# 		$Nendmax=$hy_info[$k][3];
+		# 	}
+		# 	if($Nendmin > $hy_info[$k][3]){
+		# 		$Nendmin=$hy_info[$k][3];
+		# 	}
+		# }
+		if(1){
+			printf WRITE $temp.",".$certainly.",";
+
+			for($i=$Nend-15;$i<=$Nend+35;$i++){
 				if($i<=0 || $i>=@sq){
 					printf WRITE "X,";
 				}
