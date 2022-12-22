@@ -252,20 +252,31 @@ while(<fasta>){
 
 ##############################################################
 		if($certainly==0){			#TOP3が不一致ならAmphiの高いものをcertainly=2で
-			@delete=splice(@hy_info,-13);
+			@delete = splice(@hy_info,-13);
 			@hy_info = sort{$b->[4] <=> $a->[4]} @hy_info;
-			if($hy_info[0][4]!=$hy_info[1][4]){
-				$certainly=2;
-			}else{#Amphi1位と2位が一致してたら
-				if($hy_info[1][4]!=$hy_info[2][4]){
-					if($hy_info[0][3]==$hy_info[1][3]){
-						$certainly=2;
-					}else{
-						
+			if($hy_info[0][4] != $hy_info[1][4]){
+				$certainly = 2;
+				$Nend = $hy_info[0][3];
+			}
+		}
+
+		if($certainly==0){#Amphi1位と2位が一致
+			if($hy_info[1][4] != $hy_info[2][4]){	#Amphi2位と3位が不一致　1位か2位から選択
+				if($hy_info[0][3] == $hy_info[1][3]){
+					$certainly = 2;
+					$Nend=$hy_info[0][3];
+				}else{
+					if($hy_info[0][0]>$hy_info[1][0]){
+						$certainly = 3;
+						$Nend=$hy_info[0][3];
+					}elsif($hy_info[0][0]<$hy_info[1][0]){
+						$certainly = 3;
+						$Nend=$hy_info[0][3];
 					}
 				}
 			}
 		}
+
 
 		$Nendmin=$hy_info[0][3];
 		$Nendmax=$hy_info[0][3];
