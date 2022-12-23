@@ -1,7 +1,0 @@
-per	teco != 255 && ereco == 269 && else == 0
-raw	29
-98	28
-
-ner	teco != 255 && ereco == 0
-raw	768
-98	656
