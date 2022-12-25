@@ -1,6 +1,6 @@
 
-open(SWISS, "typeII.dat");
-open(WRITE,">ppmtest.fas");
+open(SWISS, "typeII_exclusion.dat");
+open(WRITE,">npm.fas");
 
 $, = ",";
 $\ = "\n";
@@ -230,7 +230,7 @@ while(<SWISS>){
 				}
 
 
-				if($t2eco!=255 && $pmeco==269 && $goleco==0 && $ereco==0 && $nueco==0 && $mteco==0 && $lysosome==0 && $lipidanchor==0){
+				if($t2eco!=255 && $pmeco==0){
 #$pmeco==269 && $goleco==0 && $ereco==0 && $nueco==0 && $mteco==0 && $lysosome==0 && $lipidanchor==0
 #$pmeco==0
 					for($i=0;$i<@sq;$i++){
@@ -309,24 +309,6 @@ while(<SWISS>){
 						}
 						if($hydra[$max]<$hydra[$i]){
 							$max=$i;
-						}
-					}
-
-					$boader=0;
-					$NG=0;
-
-					$boader=$hydra[$max]*0.9;	#ピークの90％（要検討）をボーダーとする
-					for($i=0;$i<@sq;$i++){
-						if($hydra[$i]>$boader){
-							if($i<$max-20 || $i>$max+20){
-								$NG=1;
-							}
-						}
-					}
-					$max=$max+1;
-					if($TMRstart!=0 && $TMRend!=0){
-						if($TMRstart > $max || $TMRend < $max){
-							$NG=1;
 						}
 					}
 

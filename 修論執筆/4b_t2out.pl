@@ -304,14 +304,25 @@ while(<SWISS>){
 					}
 				}
 
-				$max=$max+1;	#プログラム上の残基数からuniprot上の残基数に変換
+				$boader=0;
+				$NG=0;
 
-				$score = 0;
-				if($TMRstart < $max && $max < $TMRend ){
-					$score = 1;
+				$boader=$hydra[$max]*0.9;	#ピークの90％（要検討）をボーダーとする
+				for($i=0;$i<@sq;$i++){
+					if($hydra[$i]>$boader){
+						if($i<$max-20 || $i>$max+20){
+							$NG=1;
+						}
+					}
+				}
+				$max=$max+1;
+				if($TMRstart!=0 && $TMRend!=0){
+					if($TMRstart > $max || $TMRend < $max){
+						$NG=1;
+					}
 				}
 
-				if($score==1){
+				if($NG==0){
 					for($i=0;$i<@all;$i++){
 						printf WRITE $all[$i]."\n";
 					}
