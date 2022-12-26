@@ -1,0 +1,1217 @@
+>Cluster 0
+0	1959aa, >AGRIN_RAT,269,0,0,0... *
+>Cluster 1
+0	1473aa, >COHA1_BOVIN,269,0,0... *
+>Cluster 2
+0	1327aa, >KTN1_MOUSE,269,0,0,... *
+>Cluster 3
+0	1152aa, >MA2A2_MOUSE,250,0,2... *
+>Cluster 4
+0	1150aa, >MA2A2_HUMAN,250,0,2... *
+>Cluster 5
+0	1144aa, >MA2A1_HUMAN,250,0,2... *
+>Cluster 6
+0	1039aa, >B4GN4_HUMAN,250,0,2... *
+>Cluster 7
+0	1034aa, >B4GN4_MOUSE,250,0,2... *
+>Cluster 8
+0	998aa, >B4GN3_HUMAN,269,0,2... *
+>Cluster 9
+0	992aa, >AMPQ_ACIJB,250,0,0,... *
+>Cluster 10
+0	992aa, >AMPQ_FELCA,250,0,0,... *
+>Cluster 11
+0	990aa, >AMPQ_HUMAN,303,0,0,... *
+>Cluster 12
+0	960aa, >ERAP2_HUMAN,269,0,0... *
+>Cluster 13
+0	960aa, >ERAP2_PONAB,250,0,0... *
+>Cluster 14
+0	959aa, >XYLT1_HUMAN,305,0,2... *
+>Cluster 15
+0	954aa, >ERAP2_BOVIN,250,0,0... *
+>Cluster 16
+0	953aa, >XYLT1_MOUSE,305,0,2... *
+>Cluster 17
+0	950aa, >XYLT1_CANLF,250,0,2... *
+>Cluster 18
+0	945aa, >XYLT1_PANTR,250,0,2... *
+>Cluster 19
+0	941aa, >ERAP1_HUMAN,305,0,0... *
+>Cluster 20
+0	940aa, >GALT5_HUMAN,250,0,2... *
+>Cluster 21
+0	930aa, >ERAP1_RAT,250,0,0,2... *
+>Cluster 22
+0	930aa, >GALT5_MOUSE,250,0,2... *
+>Cluster 23
+0	930aa, >GALT5_RAT,250,0,250... *
+>Cluster 24
+0	919aa, >EXTL3_HUMAN,269,0,2... *
+>Cluster 25
+0	918aa, >EXTL3_MOUSE,250,0,2... *
+>Cluster 26
+0	913aa, >SUN1_MOUSE,269,0,0,... *
+>Cluster 27
+0	884aa, >CHSS3_MOUSE,305,0,3... *
+>Cluster 28
+0	884aa, >NDST2_BOVIN,250,0,2... *
+>Cluster 29
+0	883aa, >EFCE2_BOVIN,305,0,2... *
+>Cluster 30
+0	883aa, >NDST2_HUMAN,250,0,2... *
+>Cluster 31
+0	883aa, >NDST2_MOUSE,250,0,2... *
+>Cluster 32
+0	882aa, >CHSS3_HUMAN,305,0,3... *
+>Cluster 33
+0	881aa, >EFCE2_MOUSE,250,0,2... *
+>Cluster 34
+0	873aa, >NDST3_HUMAN,250,0,2... *
+>Cluster 35
+0	873aa, >NDST3_MOUSE,250,0,2... *
+>Cluster 36
+0	872aa, >NDST4_HUMAN,250,0,2... *
+>Cluster 37
+0	872aa, >NDST4_MOUSE,250,0,2... *
+>Cluster 38
+0	867aa, >XYLT2_BOVIN,250,0,2... *
+>Cluster 39
+0	865aa, >XYLT2_CANLF,250,0,2... *
+>Cluster 40
+0	865aa, >XYLT2_HUMAN,305,0,3... *
+1	865aa, >XYLT2_PANTR,250,0,2... at 99.54%
+>Cluster 41
+0	865aa, >XYLT2_MOUSE,250,0,2... *
+>Cluster 42
+0	864aa, >XYLT2_RAT,250,0,250... *
+>Cluster 43
+0	834aa, >MOGS_MOUSE,250,0,0,... *
+>Cluster 44
+0	834aa, >MOGS_RAT,269,0,0,26... *
+>Cluster 45
+0	811aa, >ECE2_HUMAN,305,0,25... *
+>Cluster 46
+0	806aa, >CCPG1_PONAB,250,0,0... *
+>Cluster 47
+0	802aa, >CHSS1_HUMAN,305,0,3... *
+>Cluster 48
+0	800aa, >CHSS1_MOUSE,250,0,2... *
+>Cluster 49
+0	792aa, >MGT5B_HUMAN,250,0,2... *
+>Cluster 50
+0	792aa, >MGT5B_MOUSE,269,0,2... *
+>Cluster 51
+0	785aa, >SUN1_HUMAN,269,0,0,... *
+>Cluster 52
+0	775aa, >CHSS2_HUMAN,305,0,3... *
+>Cluster 53
+0	774aa, >CHSS2_MOUSE,250,0,2... *
+>Cluster 54
+0	772aa, >NF2L1_HUMAN,269,0,0... *
+1	772aa, >NF2L1_PONAB,250,0,0... at 99.61%
+>Cluster 55
+0	765aa, >ECE2_BOVIN,305,0,26... *
+>Cluster 56
+0	765aa, >MMEL1_MOUSE,269,0,0... *
+>Cluster 57
+0	763aa, >AOC3_RAT,269,0,0,0,... *
+>Cluster 58
+0	763aa, >ECE2_MOUSE,305,0,25... *
+>Cluster 59
+0	763aa, >NF2L1_BOVIN,250,0,0... *
+>Cluster 60
+0	758aa, >ASPH_HUMAN,269,0,0,... *
+>Cluster 61
+0	757aa, >CCPG1_HUMAN,250,0,0... *
+>Cluster 62
+0	756aa, >LARG1_HUMAN,269,0,2... *
+>Cluster 63
+0	756aa, >LARG1_MOUSE,250,0,2... *
+>Cluster 64
+0	754aa, >ASPH_BOVIN,303,0,0,... *
+>Cluster 65
+0	753aa, >CCPG1_MOUSE,269,0,0... *
+>Cluster 66
+0	742aa, >COL12_HUMAN,269,0,0... *
+>Cluster 67
+0	741aa, >ASPH_MOUSE,303,0,0,... *
+>Cluster 68
+0	741aa, >MGT5A_HUMAN,269,0,2... *
+>Cluster 69
+0	741aa, >NF2L1_MOUSE,250,0,0... *
+>Cluster 70
+0	740aa, >MGT5A_CRIGR,250,0,2... *
+>Cluster 71
+0	740aa, >MGT5A_MOUSE,250,0,2... *
+1	740aa, >MGT5A_RAT,250,0,250... at 99.73%
+>Cluster 72
+0	731aa, >SUN2_MOUSE,250,0,0,... *
+>Cluster 73
+0	721aa, >LARG2_HUMAN,305,0,2... *
+>Cluster 74
+0	717aa, >SUN2_HUMAN,305,0,0,... *
+>Cluster 75
+0	716aa, >MYORG_MOUSE,269,0,0... *
+>Cluster 76
+0	714aa, >MYORG_HUMAN,250,0,0... *
+>Cluster 77
+0	706aa, >TRDN_RABIT,269,0,0,... *
+>Cluster 78
+0	701aa, >TRDN_CANLF,269,0,0,... *
+>Cluster 79
+0	699aa, >MA1B1_HUMAN,269,0,0... *
+>Cluster 80
+0	693aa, >TRDN_MOUSE,250,0,0,... *
+>Cluster 81
+0	690aa, >LARG2_MOUSE,305,0,2... *
+>Cluster 82
+0	690aa, >LARG2_RAT,250,0,250... *
+>Cluster 83
+0	685aa, >SLC31_HUMAN,269,0,0... *
+>Cluster 84
+0	685aa, >SLC31_MOUSE,269,0,0... *
+>Cluster 85
+0	676aa, >EXTL1_HUMAN,250,0,0... *
+>Cluster 86
+0	669aa, >EXTL1_MOUSE,250,0,0... *
+>Cluster 87
+0	660aa, >PMGT1_BOVIN,250,0,2... *
+>Cluster 88
+0	660aa, >PMGT1_HUMAN,305,0,2... *
+1	660aa, >PMGT1_PONAB,250,0,2... at 99.09%
+>Cluster 89
+0	660aa, >PMGT1_MOUSE,250,0,2... *
+1	660aa, >PMGT1_RAT,250,0,250... at 99.55%
+>Cluster 90
+0	659aa, >MA1A1_PIG,269,0,0,2... *
+>Cluster 91
+0	657aa, >EDEM1_HUMAN,269,0,0... *
+>Cluster 92
+0	657aa, >GALT7_HUMAN,250,0,2... *
+1	657aa, >GALT7_PONAB,250,0,2... at 99.70%
+>Cluster 93
+0	657aa, >GALT7_MOUSE,250,0,2... *
+>Cluster 94
+0	657aa, >GALT7_RAT,250,0,250... *
+>Cluster 95
+0	655aa, >GOLI4_MOUSE,250,0,2... *
+>Cluster 96
+0	653aa, >GOLI4_RAT,269,0,269... *
+>Cluster 97
+0	652aa, >EDEM1_MOUSE,305,0,0... *
+>Cluster 98
+0	639aa, >GLT15_HUMAN,250,0,2... *
+>Cluster 99
+0	638aa, >GLT15_MOUSE,250,0,2... *
+>Cluster 100
+0	633aa, >GALT3_HUMAN,269,0,2... *
+>Cluster 101
+0	633aa, >GALT3_MOUSE,250,0,2... *
+>Cluster 102
+0	625aa, >DOPO_CANLF,250,0,0,... *
+>Cluster 103
+0	622aa, >DOPO_MOUSE,305,0,0,... *
+>Cluster 104
+0	622aa, >GALT6_BOVIN,250,0,2... *
+>Cluster 105
+0	622aa, >GALT6_HUMAN,250,0,2... *
+>Cluster 106
+0	622aa, >GALT6_MOUSE,250,0,2... *
+>Cluster 107
+0	620aa, >DOPO_RAT,250,0,0,0,... *
+>Cluster 108
+0	618aa, >GLCE_MOUSE,269,0,26... *
+>Cluster 109
+0	617aa, >DOPO_HUMAN,305,0,0,... *
+>Cluster 110
+0	617aa, >GLCE_BOVIN,250,0,25... *
+>Cluster 111
+0	617aa, >GLCE_HUMAN,250,0,25... *
+>Cluster 112
+0	610aa, >DOPO_BOVIN,305,0,0,... *
+>Cluster 113
+0	610aa, >DOPO_HORSE,250,0,0,... *
+>Cluster 114
+0	606aa, >GALT9_MACFA,250,0,2... *
+>Cluster 115
+0	606aa, >SCAR3_HUMAN,269,0,2... *
+>Cluster 116
+0	606aa, >SCAR3_MOUSE,250,0,2... *
+>Cluster 117
+0	603aa, >GALT9_HUMAN,250,0,2... *
+>Cluster 118
+0	603aa, >GLT10_HUMAN,250,0,2... *
+>Cluster 119
+0	603aa, >GLT10_MOUSE,250,0,2... *
+>Cluster 120
+0	603aa, >GLT10_RAT,250,0,250... *
+>Cluster 121
+0	601aa, >GLTL6_HUMAN,250,0,2... *
+>Cluster 122
+0	600aa, >SIA7A_HUMAN,305,0,2... *
+>Cluster 123
+0	598aa, >GLT17_HUMAN,250,0,2... *
+>Cluster 124
+0	598aa, >GLT17_MOUSE,250,0,2... *
+>Cluster 125
+0	586aa, >GGT5_HUMAN,250,0,0,... *
+>Cluster 126
+0	584aa, >FA20C_HUMAN,269,0,2... *
+>Cluster 127
+0	581aa, >GLT12_HUMAN,250,0,2... *
+>Cluster 128
+0	580aa, >PMGT2_BOVIN,250,0,0... *
+>Cluster 129
+0	580aa, >PMGT2_CANLF,250,0,0... *
+>Cluster 130
+0	580aa, >PMGT2_HUMAN,269,0,0... *
+1	580aa, >PMGT2_PANTR,250,0,0... at 99.66%
+>Cluster 131
+0	580aa, >PMGT2_MOUSE,250,0,0... *
+1	580aa, >PMGT2_RAT,250,0,0,2... at 99.31%
+>Cluster 132
+0	579aa, >FA20C_MOUSE,250,0,2... *
+>Cluster 133
+0	578aa, >GALT4_HUMAN,305,0,3... *
+>Cluster 134
+0	578aa, >GALT4_MOUSE,250,0,2... *
+>Cluster 135
+0	576aa, >GLT12_MOUSE,250,0,2... *
+>Cluster 136
+0	575aa, >FUT8_BOVIN,250,0,25... *
+>Cluster 137
+0	575aa, >FUT8_CANLF,250,0,25... *
+>Cluster 138
+0	575aa, >FUT8_HUMAN,250,0,25... *
+1	575aa, >FUT8_PANTR,250,0,25... at 100.00%
+2	574aa, >FUT8_PONAB,250,0,25... at 99.65%
+>Cluster 139
+0	575aa, >FUT8_MOUSE,250,0,25... *
+1	575aa, >FUT8_RAT,250,0,250,... at 99.13%
+>Cluster 140
+0	575aa, >FUT8_PIG,250,0,250,... *
+>Cluster 141
+0	573aa, >GGT5_MOUSE,269,0,0,... *
+>Cluster 142
+0	572aa, >GGT5_RAT,250,0,0,0,... *
+>Cluster 143
+0	571aa, >GALT2_HUMAN,269,0,2... *
+>Cluster 144
+0	568aa, >GGT3_HUMAN,250,0,0,... *
+>Cluster 145
+0	566aa, >B4GN2_HUMAN,305,0,3... *
+>Cluster 146
+0	561aa, >CHSTF_HUMAN,305,0,3... *
+>Cluster 147
+0	561aa, >CHSTF_MOUSE,305,0,3... *
+>Cluster 148
+0	561aa, >CHSTF_RAT,305,0,305... *
+>Cluster 149
+0	559aa, >AMPQ_MOUSE,250,0,0,... *
+>Cluster 150
+0	559aa, >GALT1_BOVIN,250,0,2... *
+1	559aa, >GALT1_PIG,250,0,250... at 99.28%
+>Cluster 151
+0	559aa, >GALT1_MOUSE,250,0,2... *
+>Cluster 152
+0	559aa, >GALT1_RAT,250,0,250... *
+>Cluster 153
+0	558aa, >GLT16_HUMAN,250,0,2... *
+>Cluster 154
+0	558aa, >GLT16_MOUSE,250,0,2... *
+>Cluster 155
+0	556aa, >GLT13_HUMAN,250,0,2... *
+1	556aa, >GLT13_MOUSE,250,0,2... at 99.46%
+2	556aa, >GLT13_RAT,250,0,250... at 99.28%
+>Cluster 156
+0	552aa, >GLT14_HUMAN,250,0,2... *
+>Cluster 157
+0	550aa, >GLT14_MOUSE,250,0,2... *
+>Cluster 158
+0	548aa, >MGT4B_HUMAN,250,0,2... *
+>Cluster 159
+0	548aa, >MGT4B_MOUSE,250,0,2... *
+>Cluster 160
+0	542aa, >CGAT2_HUMAN,305,0,3... *
+>Cluster 161
+0	542aa, >CGAT2_MOUSE,250,0,2... *
+>Cluster 162
+0	535aa, >MGT4A_BOVIN,250,0,2... *
+>Cluster 163
+0	535aa, >MGT4A_HUMAN,250,0,2... *
+1	535aa, >MGT4A_MACFA,250,0,2... at 99.44%
+2	535aa, >MGT4A_PONAB,250,0,2... at 99.81%
+>Cluster 164
+0	535aa, >MGT4A_MOUSE,250,0,2... *
+>Cluster 165
+0	532aa, >CGAT1_HUMAN,305,0,3... *
+>Cluster 166
+0	530aa, >CGAT1_MOUSE,305,0,3... *
+>Cluster 167
+0	530aa, >CHST2_HUMAN,269,0,2... *
+>Cluster 168
+0	530aa, >CHST2_MOUSE,250,0,2... *
+>Cluster 169
+0	530aa, >FUT4_PANTR,250,0,25... *
+>Cluster 170
+0	529aa, >SIAT2_HUMAN,250,0,2... *
+>Cluster 171
+0	529aa, >SIAT2_PANTR,250,0,2... *
+>Cluster 172
+0	526aa, >MGT4A_RAT,250,0,250... *
+>Cluster 173
+0	526aa, >SIA7A_MOUSE,250,0,2... *
+>Cluster 174
+0	525aa, >SIAT2_RAT,250,0,250... *
+>Cluster 175
+0	524aa, >SIAT2_MOUSE,250,0,2... *
+>Cluster 176
+0	521aa, >CR3L2_RAT,250,0,0,2... *
+>Cluster 177
+0	520aa, >CR3L2_PONAB,250,0,0... *
+>Cluster 178
+0	519aa, >CR3L1_MOUSE,269,0,0... *
+>Cluster 179
+0	519aa, >GAK1B_HUMAN,305,0,3... *
+>Cluster 180
+0	517aa, >GAK1B_MOUSE,250,0,2... *
+>Cluster 181
+0	516aa, >GAK1B_RAT,250,0,250... *
+>Cluster 182
+0	506aa, >PLD4_HUMAN,250,0,25... *
+>Cluster 183
+0	505aa, >CP4Z1_HUMAN,269,0,0... *
+>Cluster 184
+0	504aa, >B3GL2_MOUSE,250,0,2... *
+>Cluster 185
+0	503aa, >P4HTM_MOUSE,250,0,0... *
+>Cluster 186
+0	503aa, >PLD4_MOUSE,305,0,26... *
+>Cluster 187
+0	502aa, >P4HTM_HUMAN,269,0,0... *
+>Cluster 188
+0	500aa, >B3GL2_HUMAN,250,0,2... *
+>Cluster 189
+0	498aa, >B3GLT_HUMAN,269,0,0... *
+>Cluster 190
+0	495aa, >SIAT2_BOVIN,250,0,2... *
+>Cluster 191
+0	494aa, >FUT11_RAT,250,0,250... *
+>Cluster 192
+0	493aa, >GGT6_HUMAN,250,0,0,... *
+>Cluster 193
+0	492aa, >FUT11_HUMAN,250,0,2... *
+>Cluster 194
+0	490aa, >GGT6_BOVIN,250,0,0,... *
+>Cluster 195
+0	490aa, >PLD3_BOVIN,250,0,25... *
+>Cluster 196
+0	490aa, >PLD3_HUMAN,269,0,26... *
+1	490aa, >PLD3_PONAB,250,0,25... at 99.59%
+>Cluster 197
+0	490aa, >PLD3_MACFA,250,0,25... *
+>Cluster 198
+0	489aa, >B3GLT_MOUSE,250,0,0... *
+>Cluster 199
+0	489aa, >FUT11_MOUSE,250,0,2... *
+>Cluster 200
+0	488aa, >PLD3_MOUSE,250,0,25... *
+>Cluster 201
+0	488aa, >PLD3_RAT,250,0,250,... *
+>Cluster 202
+0	486aa, >CHST7_HUMAN,250,0,2... *
+>Cluster 203
+0	486aa, >G3ST4_HUMAN,305,0,3... *
+>Cluster 204
+0	485aa, >CHST7_RAT,250,0,250... *
+>Cluster 205
+0	484aa, >CHST7_MOUSE,250,0,2... *
+>Cluster 206
+0	483aa, >G3ST4_BOVIN,305,0,3... *
+>Cluster 207
+0	483aa, >NSMA5_MOUSE,250,0,0... *
+>Cluster 208
+0	482aa, >ALG1_MOUSE,250,0,0,... *
+>Cluster 209
+0	479aa, >CHST3_HUMAN,250,0,2... *
+>Cluster 210
+0	479aa, >CR3L3_MOUSE,250,0,0... *
+>Cluster 211
+0	478aa, >MGT4C_HUMAN,250,0,2... *
+1	478aa, >MGT4C_MACFA,250,0,2... at 99.79%
+>Cluster 212
+0	478aa, >MGT4C_MOUSE,250,0,2... *
+>Cluster 213
+0	478aa, >MGT4C_PIG,250,0,250... *
+>Cluster 214
+0	474aa, >CHST3_RAT,250,0,250... *
+>Cluster 215
+0	472aa, >CHST3_MOUSE,250,0,2... *
+>Cluster 216
+0	470aa, >CR3L3_RAT,250,0,0,2... *
+>Cluster 217
+0	464aa, >ALG1_HUMAN,305,0,0,... *
+>Cluster 218
+0	464aa, >ALG1_PONAB,250,0,0,... *
+>Cluster 219
+0	462aa, >MANEA_HUMAN,269,0,2... *
+>Cluster 220
+0	462aa, >MANEA_MOUSE,250,0,2... *
+>Cluster 221
+0	462aa, >MANEA_PONAB,250,0,2... *
+>Cluster 222
+0	462aa, >MANEA_RAT,269,0,269... *
+>Cluster 223
+0	461aa, >CR3L3_HUMAN,269,0,0... *
+>Cluster 224
+0	461aa, >FKTN_HUMAN,305,0,26... *
+>Cluster 225
+0	461aa, >FKTN_MACFA,250,0,25... *
+>Cluster 226
+0	461aa, >FKTN_MOUSE,305,0,26... *
+>Cluster 227
+0	458aa, >FICD_HUMAN,305,0,0,... *
+>Cluster 228
+0	458aa, >FICD_MOUSE,250,0,0,... *
+>Cluster 229
+0	458aa, >FICD_RAT,250,0,0,25... *
+>Cluster 230
+0	457aa, >MANEL_HUMAN,250,0,2... *
+>Cluster 231
+0	456aa, >CR3L3_BOVIN,250,0,0... *
+>Cluster 232
+0	456aa, >HS3S4_HUMAN,305,0,3... *
+>Cluster 233
+0	455aa, >BTNL2_HUMAN,269,0,0... *
+>Cluster 234
+0	455aa, >FICD_CRIGR,250,0,0,... *
+>Cluster 235
+0	455aa, >GCNT4_MOUSE,250,0,2... *
+>Cluster 236
+0	454aa, >TMPS3_HUMAN,269,0,0... *
+>Cluster 237
+0	453aa, >GCNT4_HUMAN,250,0,2... *
+>Cluster 238
+0	453aa, >TMPS3_MOUSE,269,0,0... *
+>Cluster 239
+0	452aa, >LAP2B_MOUSE,250,0,0... *
+>Cluster 240
+0	452aa, >MANEL_MOUSE,250,0,2... *
+>Cluster 241
+0	447aa, >MGAT1_MOUSE,250,0,2... *
+>Cluster 242
+0	447aa, >MGAT1_RABIT,250,0,2... *
+>Cluster 243
+0	447aa, >MGAT2_HUMAN,305,0,2... *
+>Cluster 244
+0	446aa, >MGAT2_PIG,250,0,250... *
+>Cluster 245
+0	445aa, >MGAT1_HUMAN,305,0,2... *
+>Cluster 246
+0	444aa, >RXLT1_MOUSE,250,0,2... *
+>Cluster 247
+0	443aa, >CHST9_HUMAN,250,0,2... *
+>Cluster 248
+0	443aa, >GLTL5_HUMAN,305,0,0... *
+>Cluster 249
+0	443aa, >GLTL5_MACFA,305,0,0... *
+>Cluster 250
+0	443aa, >RXLT1_HUMAN,305,0,2... *
+>Cluster 251
+0	442aa, >MGAT2_MOUSE,250,0,2... *
+>Cluster 252
+0	442aa, >MGAT2_RAT,250,0,250... *
+>Cluster 253
+0	440aa, >GCNT3_BOSMU,250,0,2... *
+1	440aa, >GCNT3_BOVIN,250,0,2... at 99.77%
+2	440aa, >GCNT3_BUBBU,250,0,2... at 99.09%
+>Cluster 254
+0	440aa, >GCNT3_SHEEP,250,0,2... *
+>Cluster 255
+0	440aa, >GCNT3_SYNCA,250,0,2... *
+>Cluster 256
+0	438aa, >GCNT3_HUMAN,250,0,2... *
+>Cluster 257
+0	437aa, >GCNT3_MOUSE,250,0,2... *
+>Cluster 258
+0	437aa, >GCNT3_RAT,250,0,250... *
+>Cluster 259
+0	433aa, >GCNT7_MOUSE,250,0,2... *
+>Cluster 260
+0	431aa, >DIK1B_HUMAN,250,0,0... *
+>Cluster 261
+0	431aa, >DIK1B_MOUSE,269,0,0... *
+>Cluster 262
+0	431aa, >DIK1B_RAT,250,0,0,2... *
+>Cluster 263
+0	431aa, >G3ST3_HUMAN,305,0,3... *
+>Cluster 264
+0	431aa, >G3ST3_MOUSE,305,0,3... *
+>Cluster 265
+0	431aa, >GLTL5_MOUSE,305,0,0... *
+>Cluster 266
+0	430aa, >GCNT7_HUMAN,250,0,2... *
+>Cluster 267
+0	429aa, >GCNT7_PIG,250,0,250... *
+>Cluster 268
+0	428aa, >DIK1A_HUMAN,250,0,0... *
+1	428aa, >DIK1A_PONAB,250,0,0... at 100.00%
+>Cluster 269
+0	428aa, >DIK1A_MOUSE,269,0,0... *
+>Cluster 270
+0	428aa, >GCNT1_HUMAN,269,0,2... *
+>Cluster 271
+0	428aa, >GCNT1_MOUSE,250,0,2... *
+>Cluster 272
+0	427aa, >G3ST3_BOVIN,250,0,2... *
+>Cluster 273
+0	427aa, >GCNT1_BOVIN,250,0,2... *
+>Cluster 274
+0	424aa, >CHST8_HUMAN,250,0,2... *
+>Cluster 275
+0	423aa, >G3ST1_BOVIN,305,0,3... *
+>Cluster 276
+0	423aa, >G3ST1_HUMAN,305,0,3... *
+>Cluster 277
+0	423aa, >G3ST1_MOUSE,305,0,3... *
+>Cluster 278
+0	422aa, >B3GT2_HUMAN,305,0,3... *
+1	422aa, >B3GT2_PONAB,305,0,3... at 99.76%
+>Cluster 279
+0	422aa, >B3GT2_MOUSE,305,0,3... *
+>Cluster 280
+0	420aa, >SIAT9_BOVIN,305,0,3... *
+>Cluster 281
+0	420aa, >UXS1_HUMAN,305,0,25... *
+1	420aa, >UXS1_PONAB,250,0,25... at 99.76%
+>Cluster 282
+0	420aa, >UXS1_MOUSE,250,0,25... *
+1	420aa, >UXS1_RAT,305,0,269,... at 99.52%
+>Cluster 283
+0	419aa, >CHSTC_MOUSE,250,0,2... *
+>Cluster 284
+0	419aa, >DIK1C_HUMAN,250,0,0... *
+>Cluster 285
+0	417aa, >CHST8_MOUSE,250,0,2... *
+>Cluster 286
+0	417aa, >TM11G_RAT,269,0,0,0... *
+>Cluster 287
+0	416aa, >APMAP_HUMAN,269,0,0... *
+>Cluster 288
+0	415aa, >B4GA1_HUMAN,269,0,2... *
+>Cluster 289
+0	414aa, >CHSTC_HUMAN,250,0,2... *
+>Cluster 290
+0	414aa, >SIAT9_MOUSE,305,0,3... *
+>Cluster 291
+0	413aa, >CHST9_MOUSE,250,0,2... *
+>Cluster 292
+0	411aa, >CHST1_HUMAN,250,0,2... *
+>Cluster 293
+0	411aa, >CHST1_MOUSE,250,0,2... *
+>Cluster 294
+0	411aa, >CHST1_RAT,250,0,250... *
+>Cluster 295
+0	411aa, >CHST5_HUMAN,305,0,3... *
+>Cluster 296
+0	410aa, >DIK1C_MOUSE,269,0,0... *
+>Cluster 297
+0	409aa, >XYLK_HUMAN,269,0,26... *
+>Cluster 298
+0	407aa, >UST_MOUSE,250,0,250... *
+>Cluster 299
+0	406aa, >HS3SA_HUMAN,305,0,3... *
+>Cluster 300
+0	406aa, >SIAT1_HUMAN,305,0,2... *
+>Cluster 301
+0	406aa, >UST_HUMAN,250,0,250... *
+>Cluster 302
+0	404aa, >CREB3_MOUSE,250,0,2... *
+>Cluster 303
+0	403aa, >CANT1_MOUSE,250,0,2... *
+>Cluster 304
+0	403aa, >CANT1_RAT,269,0,269... *
+>Cluster 305
+0	403aa, >SIAT1_RAT,305,0,269... *
+>Cluster 306
+0	402aa, >GNT2A_HUMAN,250,0,2... *
+>Cluster 307
+0	401aa, >B3GN7_HUMAN,305,0,3... *
+>Cluster 308
+0	401aa, >GOLM1_HUMAN,269,0,2... *
+>Cluster 309
+0	399aa, >AAAD_BOVIN,250,0,0,... *
+>Cluster 310
+0	398aa, >AAAD_MOUSE,250,0,0,... *
+>Cluster 311
+0	398aa, >AAAD_RAT,250,0,0,25... *
+>Cluster 312
+0	398aa, >FUT4_BOVIN,250,0,25... *
+>Cluster 313
+0	398aa, >G3ST2_HUMAN,305,0,3... *
+>Cluster 314
+0	398aa, >G3ST2_PIG,305,0,305... *
+>Cluster 315
+0	398aa, >SIA8F_HUMAN,305,0,3... *
+1	398aa, >SIA8F_PANTR,305,0,3... at 99.50%
+>Cluster 316
+0	398aa, >SIA8F_MOUSE,305,0,3... *
+>Cluster 317
+0	397aa, >B3GN2_HUMAN,305,0,3... *
+>Cluster 318
+0	397aa, >B3GN2_MOUSE,305,0,3... *
+>Cluster 319
+0	397aa, >B3GN7_MOUSE,305,0,3... *
+>Cluster 320
+0	397aa, >B3GN7_RAT,305,0,305... *
+>Cluster 321
+0	397aa, >B3GN8_HUMAN,250,0,2... *
+>Cluster 322
+0	396aa, >B4GT3_BOVIN,250,0,2... *
+>Cluster 323
+0	395aa, >B4GT3_CRIGR,250,0,2... *
+>Cluster 324
+0	395aa, >B4GT3_MOUSE,250,0,2... *
+>Cluster 325
+0	395aa, >B4GT3_RAT,250,0,250... *
+>Cluster 326
+0	395aa, >CHST5_MOUSE,250,0,2... *
+>Cluster 327
+0	395aa, >CHST6_HUMAN,250,0,2... *
+>Cluster 328
+0	395aa, >CR3L4_HUMAN,305,0,3... *
+>Cluster 329
+0	395aa, >CR3L4_MACFA,250,0,0... *
+>Cluster 330
+0	394aa, >G3ST2_MOUSE,305,0,3... *
+>Cluster 331
+0	393aa, >B4GT3_PONAB,250,0,2... *
+>Cluster 332
+0	393aa, >GOLM1_MOUSE,250,0,2... *
+>Cluster 333
+0	393aa, >HS3SA_MOUSE,305,0,3... *
+>Cluster 334
+0	393aa, >MMP23_BOVIN,250,0,0... *
+>Cluster 335
+0	393aa, >XXLT1_HUMAN,269,0,0... *
+>Cluster 336
+0	392aa, >XXLT1_MOUSE,250,0,0... *
+>Cluster 337
+0	391aa, >B3GN6_MOUSE,250,0,2... *
+>Cluster 338
+0	391aa, >MMP23_MOUSE,269,0,0... *
+>Cluster 339
+0	390aa, >HS3SB_HUMAN,305,0,3... *
+>Cluster 340
+0	390aa, >HS3SB_MOUSE,305,0,3... *
+>Cluster 341
+0	390aa, >MMP23_HUMAN,269,0,0... *
+>Cluster 342
+0	389aa, >B3GN8_MOUSE,250,0,2... *
+>Cluster 343
+0	388aa, >CHST4_MOUSE,269,0,2... *
+>Cluster 344
+0	386aa, >CHST4_HUMAN,269,0,2... *
+>Cluster 345
+0	384aa, >B3GN6_HUMAN,269,0,2... *
+>Cluster 346
+0	380aa, >LFNG_BOVIN,250,0,25... *
+>Cluster 347
+0	380aa, >SIA8C_HUMAN,305,0,3... *
+>Cluster 348
+0	380aa, >SIA8C_MOUSE,305,0,3... *
+>Cluster 349
+0	380aa, >SIA8C_PANTR,305,0,3... *
+>Cluster 350
+0	379aa, >LFNG_HUMAN,250,0,25... *
+>Cluster 351
+0	378aa, >B3GN4_HUMAN,250,0,2... *
+>Cluster 352
+0	378aa, >B3GN5_HUMAN,250,0,2... *
+>Cluster 353
+0	378aa, >LFNG_MOUSE,250,0,25... *
+>Cluster 354
+0	378aa, >LFNG_RAT,250,0,250,... *
+>Cluster 355
+0	377aa, >B3GN5_PIG,250,0,250... *
+>Cluster 356
+0	377aa, >B3GN5_RAT,250,0,250... *
+>Cluster 357
+0	377aa, >FUT1_MOUSE,305,0,30... *
+>Cluster 358
+0	377aa, >TPST2_BOVIN,250,0,2... *
+>Cluster 359
+0	377aa, >TPST2_HUMAN,269,0,2... *
+1	377aa, >TPST2_MACFA,250,0,2... at 99.20%
+>Cluster 360
+0	376aa, >B3GN5_MOUSE,250,0,2... *
+>Cluster 361
+0	376aa, >CHSTE_HUMAN,250,0,2... *
+>Cluster 362
+0	376aa, >CHSTE_MOUSE,250,0,2... *
+>Cluster 363
+0	376aa, >FUT1_RAT,250,0,250,... *
+>Cluster 364
+0	376aa, >GGTA1_ALOCA,250,0,2... *
+>Cluster 365
+0	376aa, >GGTA1_CALJA,250,0,2... *
+>Cluster 366
+0	376aa, >GGTA1_LORTA,250,0,2... *
+>Cluster 367
+0	376aa, >TPST2_MOUSE,250,0,2... *
+>Cluster 368
+0	376aa, >TPST2_RAT,250,0,250... *
+>Cluster 369
+0	375aa, >GGTA1_LEMCA,250,0,2... *
+>Cluster 370
+0	375aa, >GGTA1_SAPAP,250,0,2... *
+>Cluster 371
+0	375aa, >SIA8B_HUMAN,305,0,3... *
+1	375aa, >SIA8B_PANTR,305,0,3... at 99.47%
+>Cluster 372
+0	375aa, >SIA8B_MOUSE,305,0,3... *
+1	375aa, >SIA8B_RAT,305,0,305... at 99.47%
+>Cluster 373
+0	375aa, >SIAT6_PANTR,250,0,2... *
+>Cluster 374
+0	374aa, >FUT5_GORGO,250,0,25... *
+>Cluster 375
+0	374aa, >FUT5_HYLLA,250,0,25... *
+>Cluster 376
+0	374aa, >FUT5_PANTR,250,0,25... *
+>Cluster 377
+0	374aa, >FUT5_PONPY,250,0,25... *
+>Cluster 378
+0	374aa, >MGT4D_HUMAN,305,0,2... *
+>Cluster 379
+0	374aa, >SIA7B_HUMAN,305,0,3... *
+>Cluster 380
+0	373aa, >FUT1_RABIT,250,0,25... *
+>Cluster 381
+0	373aa, >MGT4D_MOUSE,250,0,2... *
+>Cluster 382
+0	373aa, >SIA7B_MOUSE,305,0,3... *
+>Cluster 383
+0	372aa, >B3GN3_HUMAN,305,0,3... *
+>Cluster 384
+0	372aa, >B3GN3_MOUSE,305,0,3... *
+>Cluster 385
+0	372aa, >FUT3_PANTR,250,0,25... *
+>Cluster 386
+0	372aa, >FUT3_PONPY,250,0,25... *
+>Cluster 387
+0	372aa, >MGT4D_RAT,305,0,269... *
+>Cluster 388
+0	371aa, >CREB3_HUMAN,269,0,2... *
+>Cluster 389
+0	371aa, >GGTA1_RAT,269,0,269... *
+>Cluster 390
+0	370aa, >CR3L4_MOUSE,269,0,0... *
+>Cluster 391
+0	370aa, >GGTA1_FELCA,250,0,2... *
+>Cluster 392
+0	370aa, >TPST1_HUMAN,269,0,2... *
+>Cluster 393
+0	370aa, >TPST1_MOUSE,250,0,2... *
+1	370aa, >TPST1_RAT,305,0,305... at 99.19%
+>Cluster 394
+0	369aa, >B4GT2_CRIGR,250,0,2... *
+>Cluster 395
+0	369aa, >B4GT2_MOUSE,250,0,2... *
+>Cluster 396
+0	368aa, >CREB3_BOVIN,250,0,2... *
+>Cluster 397
+0	368aa, >SEC1_BOVIN,250,0,25... *
+>Cluster 398
+0	368aa, >SEC1_MOUSE,250,0,25... *
+>Cluster 399
+0	367aa, >CR3L4_RAT,250,0,0,2... *
+>Cluster 400
+0	367aa, >HS3S2_HUMAN,305,0,3... *
+>Cluster 401
+0	367aa, >HS3S2_MOUSE,305,0,3... *
+1	367aa, >HS3S2_RAT,305,0,305... at 100.00%
+>Cluster 402
+0	366aa, >FUT1_ALOBE,250,0,25... *
+>Cluster 403
+0	366aa, >FUT1_ALOCA,250,0,25... *
+>Cluster 404
+0	366aa, >FUT1_AOTAZ,250,0,25... *
+1	366aa, >FUT1_AOTNA,250,0,25... at 99.73%
+>Cluster 405
+0	366aa, >FUT1_ATEBE,250,0,25... *
+>Cluster 406
+0	366aa, >FUT1_GORGO,250,0,25... *
+>Cluster 407
+0	366aa, >FUT1_LAGLA,250,0,25... *
+>Cluster 408
+0	366aa, >FUT1_PANTR,250,0,25... *
+>Cluster 409
+0	366aa, >FUT1_PLEBR,250,0,25... *
+>Cluster 410
+0	366aa, >FUT1_SAIBB,250,0,25... *
+1	366aa, >FUT1_SAISC,250,0,25... at 99.18%
+>Cluster 411
+0	366aa, >FUT1_SAPAP,250,0,25... *
+>Cluster 412
+0	365aa, >FUT1_HUMAN,250,0,25... *
+>Cluster 413
+0	365aa, >FUT1_LEOCY,250,0,25... *
+>Cluster 414
+0	365aa, >FUT1_LEOFU,250,0,25... *
+1	365aa, >FUT1_MICHU,250,0,25... at 99.18%
+>Cluster 415
+0	365aa, >FUT1_PIG,250,0,250,... *
+>Cluster 416
+0	365aa, >FUT3_BOVIN,250,0,25... *
+>Cluster 417
+0	363aa, >C1GLT_RAT,269,0,0,0... *
+>Cluster 418
+0	362aa, >IMPA3_BOVIN,250,0,2... *
+>Cluster 419
+0	361aa, >FUT3_HUMAN,269,0,1,... *
+>Cluster 420
+0	360aa, >A4GAT_RAT,250,0,250... *
+>Cluster 421
+0	360aa, >FUT1_BOVIN,250,0,25... *
+>Cluster 422
+0	359aa, >A4GAT_MOUSE,250,0,2... *
+>Cluster 423
+0	359aa, >FUT6_GORGO,250,0,25... *
+>Cluster 424
+0	359aa, >FUT6_PANTR,250,0,25... *
+>Cluster 425
+0	359aa, >FUT6_PONPY,250,0,25... *
+>Cluster 426
+0	359aa, >FUT9_BOVIN,250,0,25... *
+>Cluster 427
+0	359aa, >FUT9_CANLF,250,0,25... *
+1	359aa, >FUT9_HUMAN,250,0,25... at 99.44%
+2	359aa, >FUT9_PANTR,250,0,25... at 99.44%
+>Cluster 428
+0	359aa, >FUT9_CRIGR,250,0,25... *
+>Cluster 429
+0	359aa, >FUT9_MOUSE,250,0,26... *
+1	359aa, >FUT9_RAT,250,0,250,... at 99.16%
+>Cluster 430
+0	359aa, >IMPA3_HUMAN,269,0,2... *
+>Cluster 431
+0	359aa, >IMPA3_PIG,250,0,250... *
+>Cluster 432
+0	358aa, >IMPA3_CALJA,250,0,2... *
+>Cluster 433
+0	357aa, >AT1B4_HUMAN,250,0,0... *
+>Cluster 434
+0	356aa, >AT1B4_MOUSE,250,0,0... *
+>Cluster 435
+0	356aa, >AT1B4_RAT,250,0,0,0... *
+>Cluster 436
+0	356aa, >HS2ST_CRILO,250,0,2... *
+>Cluster 437
+0	356aa, >HS2ST_HUMAN,250,0,2... *
+1	356aa, >HS2ST_PONAB,250,0,2... at 99.72%
+>Cluster 438
+0	356aa, >HS2ST_MOUSE,269,0,2... *
+>Cluster 439
+0	356aa, >IMPA3_MOUSE,250,0,2... *
+>Cluster 440
+0	356aa, >IMPA3_RAT,250,0,250... *
+>Cluster 441
+0	356aa, >SIA8A_BOVIN,305,0,3... *
+>Cluster 442
+0	356aa, >SIA8A_HUMAN,305,0,3... *
+1	356aa, >SIA8A_PANTR,305,0,3... at 99.44%
+>Cluster 443
+0	355aa, >AT1B4_BOVIN,250,0,0... *
+>Cluster 444
+0	355aa, >AT1B4_PIG,269,0,0,0... *
+>Cluster 445
+0	355aa, >SIA8A_MOUSE,305,0,3... *
+>Cluster 446
+0	354aa, >FUT2_RAT,250,0,250,... *
+>Cluster 447
+0	353aa, >A4GAT_HUMAN,305,0,3... *
+1	353aa, >A4GAT_PANTR,305,0,3... at 99.43%
+>Cluster 448
+0	352aa, >CHSTB_HUMAN,250,0,2... *
+>Cluster 449
+0	352aa, >CHSTB_MOUSE,250,0,2... *
+1	352aa, >CHSTB_RAT,250,0,250... at 99.43%
+>Cluster 450
+0	350aa, >B3GN4_MOUSE,250,0,2... *
+>Cluster 451
+0	350aa, >SG196_HUMAN,305,0,0... *
+>Cluster 452
+0	350aa, >SG196_MACFA,250,0,0... *
+>Cluster 453
+0	349aa, >SG196_MOUSE,250,0,0... *
+>Cluster 454
+0	349aa, >SG196_RAT,250,0,0,2... *
+>Cluster 455
+0	348aa, >CF089_MOUSE,250,0,2... *
+>Cluster 456
+0	348aa, >CF089_RAT,250,0,250... *
+>Cluster 457
+0	348aa, >ERLN1_HUMAN,269,0,0... *
+1	348aa, >ERLN1_PONAB,250,0,0... at 99.43%
+>Cluster 458
+0	348aa, >ERLN1_MOUSE,250,0,0... *
+>Cluster 459
+0	347aa, >CF089_HUMAN,269,0,2... *
+>Cluster 460
+0	347aa, >CF089_PONAB,250,0,2... *
+>Cluster 461
+0	347aa, >FUT2_MOUSE,250,0,25... *
+>Cluster 462
+0	347aa, >GBGT1_CANLF,250,0,2... *
+>Cluster 463
+0	347aa, >GBGT1_HUMAN,305,0,3... *
+>Cluster 464
+0	347aa, >GBGT1_MOUSE,250,0,2... *
+>Cluster 465
+0	346aa, >HS3S5_HUMAN,305,0,3... *
+>Cluster 466
+0	346aa, >HS3S5_MOUSE,305,0,3... *
+>Cluster 467
+0	344aa, >B4GT4_CRIGR,250,0,2... *
+>Cluster 468
+0	344aa, >FUT2_BOVIN,250,0,25... *
+>Cluster 469
+0	343aa, >FUT2_GORGO,250,0,25... *
+1	343aa, >FUT2_PANTR,250,0,25... at 99.13%
+>Cluster 470
+0	343aa, >FUT2_HYLLA,250,0,25... *
+>Cluster 471
+0	343aa, >FUT2_PONPY,250,0,25... *
+>Cluster 472
+0	342aa, >HS3S6_HUMAN,305,0,3... *
+>Cluster 473
+0	342aa, >HS3S6_MOUSE,305,0,3... *
+>Cluster 474
+0	341aa, >A4GCT_MOUSE,305,0,3... *
+>Cluster 475
+0	341aa, >CHSTD_HUMAN,250,0,2... *
+>Cluster 476
+0	340aa, >A3LT2_HUMAN,250,0,2... *
+>Cluster 477
+0	340aa, >ERLN2_MOUSE,250,0,0... *
+>Cluster 478
+0	340aa, >FUT2_PIG,250,0,250,... *
+>Cluster 479
+0	340aa, >MARC1_MOUSE,250,0,0... *
+>Cluster 480
+0	339aa, >ERLN2_HUMAN,269,0,0... *
+1	339aa, >ERLN2_PONAB,250,0,0... at 100.00%
+>Cluster 481
+0	339aa, >ERLN2_RAT,250,0,0,2... *
+>Cluster 482
+0	338aa, >ERLN2_BOVIN,250,0,0... *
+>Cluster 483
+0	337aa, >MARC1_HUMAN,269,0,0... *
+>Cluster 484
+0	336aa, >SIA7E_HUMAN,250,0,2... *
+>Cluster 485
+0	335aa, >B3GA1_CANLF,250,0,2... *
+>Cluster 486
+0	335aa, >B3GA3_CRIGR,250,0,2... *
+1	335aa, >B3GA3_MOUSE,250,0,2... at 99.70%
+>Cluster 487
+0	334aa, >B3GA1_HUMAN,250,0,2... *
+>Cluster 488
+0	334aa, >B3GA1_MOUSE,250,0,2... *
+>Cluster 489
+0	334aa, >RFNG_RAT,305,0,305,... *
+>Cluster 490
+0	333aa, >SIA4C_MOUSE,250,0,2... *
+>Cluster 491
+0	333aa, >SIA4C_RAT,250,0,250... *
+>Cluster 492
+0	333aa, >SIA7F_HUMAN,250,0,2... *
+>Cluster 493
+0	333aa, >SIA7F_MOUSE,250,0,2... *
+>Cluster 494
+0	332aa, >B3GA1_PANTR,250,0,2... *
+>Cluster 495
+0	332aa, >RFNG_MOUSE,305,0,30... *
+>Cluster 496
+0	332aa, >SIA7F_BOVIN,250,0,2... *
+>Cluster 497
+0	331aa, >B3GL1_MOUSE,250,0,2... *
+1	331aa, >B3GL1_MUSSI,250,0,2... at 100.00%
+>Cluster 498
+0	331aa, >B3GL1_PIG,250,0,250... *
+>Cluster 499
+0	331aa, >B3GL1_PONAB,250,0,2... *
+>Cluster 500
+0	331aa, >B3GL1_RAT,250,0,250... *
+>Cluster 501
+0	331aa, >RFNG_HUMAN,305,0,30... *
+>Cluster 502
+0	331aa, >SIA10_BOVIN,305,0,3... *
+>Cluster 503
+0	331aa, >SIA10_HUMAN,305,0,3... *
+1	331aa, >SIA10_PANTR,305,0,3... at 99.70%
+2	331aa, >SIA10_PONAB,305,0,3... at 99.70%
+>Cluster 504
+0	331aa, >SIA10_RAT,305,0,305... *
+>Cluster 505
+0	330aa, >EXTL2_HUMAN,250,0,0... *
+>Cluster 506
+0	330aa, >EXTL2_MOUSE,250,0,0... *
+>Cluster 507
+0	329aa, >B3GA2_CANLF,250,0,2... *
+>Cluster 508
+0	329aa, >B3GT6_HUMAN,269,0,2... *
+>Cluster 509
+0	329aa, >SIA10_MOUSE,305,0,3... *
+>Cluster 510
+0	328aa, >CLC4K_HUMAN,269,0,0... *
+>Cluster 511
+0	328aa, >SIA4C_PANTR,250,0,2... *
+>Cluster 512
+0	327aa, >B4GT7_MOUSE,250,0,2... *
+>Cluster 513
+0	326aa, >B3GT1_GORGO,305,0,3... *
+1	326aa, >B3GT1_HUMAN,305,0,3... at 100.00%
+2	326aa, >B3GT1_MOUSE,305,0,3... at 100.00%
+3	326aa, >B3GT1_PANPA,305,0,3... at 100.00%
+4	326aa, >B3GT1_PANTR,305,0,3... at 100.00%
+5	326aa, >B3GT1_PONPY,305,0,3... at 100.00%
+>Cluster 514
+0	325aa, >B3GT6_MOUSE,250,0,2... *
+>Cluster 515
+0	325aa, >DRS7B_BOVIN,250,0,0... *
+>Cluster 516
+0	325aa, >DRS7B_HUMAN,250,0,0... *
+>Cluster 517
+0	325aa, >DRS7B_PONAB,250,0,0... *
+>Cluster 518
+0	325aa, >DRS7B_RAT,269,0,0,2... *
+>Cluster 519
+0	324aa, >ALG5_HUMAN,250,0,0,... *
+>Cluster 520
+0	324aa, >ALG5_MOUSE,250,0,0,... *
+>Cluster 521
+0	324aa, >B3GA2_MOUSE,250,0,2... *
+>Cluster 522
+0	323aa, >DRS7B_MOUSE,250,0,0... *
+>Cluster 523
+0	321aa, >GTA1L_RAT,250,0,250... *
+>Cluster 524
+0	321aa, >MFNG_HUMAN,250,0,25... *
+>Cluster 525
+0	321aa, >MFNG_MOUSE,250,0,25... *
+>Cluster 526
+0	321aa, >MFNG_PANTR,250,0,25... *
+>Cluster 527
+0	319aa, >GTA1L_MOUSE,250,0,2... *
+>Cluster 528
+0	318aa, >RDH11_HUMAN,269,0,0... *
+>Cluster 529
+0	317aa, >TNMD_HUMAN,305,0,0,... *
+>Cluster 530
+0	316aa, >RDH11_MOUSE,269,0,0... *
+>Cluster 531
+0	310aa, >B3GT5_HUMAN,305,0,3... *
+>Cluster 532
+0	308aa, >B3GT5_MOUSE,305,0,3... *
+>Cluster 533
+0	307aa, >LRC59_MOUSE,250,0,0... *
+>Cluster 534
+0	307aa, >LRC59_RAT,250,0,0,2... *
+>Cluster 535
+0	306aa, >LRC59_BOVIN,250,0,0... *
+>Cluster 536
+0	305aa, >PEX26_HUMAN,269,0,0... *
+>Cluster 537
+0	305aa, >PEX26_MACFA,250,0,0... *
+>Cluster 538
+0	305aa, >PEX26_MOUSE,250,0,0... *
+>Cluster 539
+0	305aa, >SIA7C_HUMAN,305,0,3... *
+>Cluster 540
+0	305aa, >SIA7C_MOUSE,305,0,3... *
+>Cluster 541
+0	305aa, >SIA7C_RAT,305,0,305... *
+>Cluster 542
+0	302aa, >SIA7D_HUMAN,250,0,2... *
+>Cluster 543
+0	301aa, >PEX26_CRIGR,250,0,0... *
+>Cluster 544
+0	296aa, >PLS3_MOUSE,250,0,0,... *
+>Cluster 545
+0	296aa, >PLS3_RAT,305,0,0,0,... *
+>Cluster 546
+0	295aa, >PLS3_HUMAN,250,0,0,... *
+>Cluster 547
+0	274aa, >T106B_HUMAN,269,0,0... *
+>Cluster 548
+0	271aa, >ABHEA_HUMAN,305,0,0... *
+>Cluster 549
+0	267aa, >XBP1_MOUSE,250,0,0,... *
+>Cluster 550
+0	267aa, >XBP1_RAT,250,0,0,25... *
+>Cluster 551
+0	251aa, >TNF15_HUMAN,305,0,0... *
+>Cluster 552
+0	247aa, >ABHEA_MOUSE,305,0,0... *
+>Cluster 553
+0	242aa, >ABHEA_RAT,305,0,0,0... *
+>Cluster 554
+0	241aa, >CLC9A_HUMAN,269,0,0... *
+>Cluster 555
+0	238aa, >CLC9A_MOUSE,269,0,0... *
+>Cluster 556
+0	221aa, >SACA3_MOUSE,305,0,0... *
+>Cluster 557
+0	215aa, >SACA3_HUMAN,305,0,0... *
+>Cluster 558
+0	215aa, >SACA3_PANTR,250,0,0... *
+>Cluster 559
+0	192aa, >SC11C_CANLF,269,0,0... *
+>Cluster 560
+0	192aa, >SC11C_HUMAN,250,0,0... *
+1	192aa, >SC11C_PONAB,250,0,0... at 100.00%
+>Cluster 561
+0	192aa, >SC11C_MOUSE,250,0,0... *
+>Cluster 562
+0	185aa, >NSG1_HUMAN,250,0,25... *
+1	185aa, >NSG1_MACFA,250,0,25... at 100.00%
+2	185aa, >NSG1_PONAB,250,0,25... at 100.00%
+>Cluster 563
+0	185aa, >NSG1_MOUSE,250,0,25... *
+1	185aa, >NSG1_RAT,269,0,269,... at 99.46%
+>Cluster 564
+0	180aa, >ARXS1_MOUSE,305,0,0... *
+1	180aa, >ARXS2_MOUSE,305,0,0... at 100.00%
+2	180aa, >SPCS3_RAT,250,0,0,2... at 99.44%
+>Cluster 565
+0	180aa, >SPCS3_BOVIN,250,0,0... *
+1	180aa, >SPCS3_CANLF,269,0,0... at 100.00%
+2	180aa, >SPCS3_HUMAN,250,0,0... at 100.00%
+3	180aa, >SPCS3_MOUSE,250,0,0... at 100.00%
+>Cluster 566
+0	171aa, >NSG2_BOVIN,250,0,25... *
+>Cluster 567
+0	171aa, >NSG2_HUMAN,250,0,25... *
+>Cluster 568
+0	171aa, >NSG2_MOUSE,250,0,26... *
+>Cluster 569
+0	171aa, >NSG2_RAT,269,0,250,... *
+>Cluster 570
+0	156aa, >IEX1_HUMAN,269,0,0,... *
+>Cluster 571
+0	100aa, >GGTA1_HUMAN,250,0,2... *
+>Cluster 572
+0	99aa, >FREY_AILME,250,0,0,... *
+>Cluster 573
+0	99aa, >FREY_MOUSE,269,0,0,... *
+>Cluster 574
+0	98aa, >FREY_HUMAN,250,0,0,... *
+>Cluster 575
+0	71aa, >BWNIN_HUMAN,305,0,0... *
+>Cluster 576
+0	71aa, >BWNIN_PONAB,250,0,0... *
+>Cluster 577
+0	67aa, >BWNIN_MOUSE,250,0,0... *
