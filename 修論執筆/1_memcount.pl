@@ -1,6 +1,6 @@
 
 open(SWISS, "uniprot_sprot.dat");
-open(WRITE,">memcount.csv");
+open(WRITE,">1_memcount.csv");
 
 $, = ",";
 $\ = "\n";
@@ -47,9 +47,15 @@ while(<SWISS>){
 	elsif($_ =~ /^\/\//){
 		if($swissoc =~ /homo/){
 			if($swisssu =~ /membrane |Membrane /){
-				printf WRITE "1,".$FT."\n";
+				$mem=1;
+				$match=0;
+				if($mem==$FT){$match=1;}
+				printf WRITE $swissid.",1,".$FT.$match."\n";
 			}else{
-				printf WRITE "0,".$FT."\n";
+				$mem=0;
+				$match=0;
+				if($mem==$FT){$match=1;}
+				printf WRITE $swissid.",0,".$FT.$match."\n";
 			}
 		}
 		$FT=0;

@@ -1,6 +1,6 @@
 
 open(SWISS, "uniprot_sprot.dat");
-open(WRITE,">hypeak.csv");
+open(WRITE,">3_hypeak_ft.csv");
 
 $, = ",";
 $\ = "\n";

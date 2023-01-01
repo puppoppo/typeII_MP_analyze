@@ -1,6 +1,6 @@
 
 open(SWISS, "uniprot_sprot.dat");
-open(WRITE,">count_t2FTeco.csv");
+open(WRITE,">2_FTeco_count.csv");
 
 $, = ",";
 $\ = "\n";
