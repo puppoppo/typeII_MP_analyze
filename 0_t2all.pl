@@ -34,7 +34,7 @@ while(<SWISS>){
 	elsif($_ =~ /^CC       / && $suswitch == 1){
 		$swisssu .= substr($_,9,100);
 	}
-	elsif($_ =~/^FT   TRANSMEM/){	
+	elsif($_ =~/^FT   TRANSMEM/){
 		$ftnumber++;
 		$ftswitch = 1;
 	}

@@ -1,5 +1,5 @@
 
-open(SWISS, "uniprot_sprot.dat");
+open(SWISS, "typeII.dat");
 
 $, = ",";
 $\ = "\n";
