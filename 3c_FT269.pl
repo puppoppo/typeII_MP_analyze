@@ -1,5 +1,3 @@
-#LINE 5 , LINE 227　を変えて出力指定
-
 
 open(SWISS, "typeII_exclusion.dat");
 open(WRITE,">FT269.fas");
@@ -17,9 +15,6 @@ while(<SWISS>){
 		$swissid =~ s/\s//g;
 	}
 	 elsif($_ =~ /^DE/){
-		if($_ =~ /^DE   RecName: Full=/){
-			$swissde .= substr($_,19,100);
-		}
 		if($_ =~ /Fragment/){
 			$frag = 1;
 		}
@@ -27,10 +22,9 @@ while(<SWISS>){
 	elsif($_ =~ /^OC   /){
 		$swissoc .= substr($_,5,100);
 	}
-
 	elsif($_ =~ /^CC   -!- SUBCELLULAR LOCATION/){
-	$suswitch = 1;
-	$swisssu .= substr($_,9,100);
+		$suswitch = 1;
+		$swisssu .= substr($_,9,100);
 	}
 	elsif($_ =~ /^CC   -!-|CC   ---/){
 		$suswitch = 0;
@@ -40,11 +34,6 @@ while(<SWISS>){
 	}
 	elsif($_ =~/^FT   TRANSMEM/){	#出力はしてないけどTMR残基を格納しています
 		$ftnumber++;
-		$TMR = substr($_,21,100);
-		@TMRregion = split(/\.\./, $TMR);
-		$TMRstart = int($TMRregion[0]);
-		$TMRend =  int($TMRregion[1]);
-		$TMRregion = (0);
 		$ftswitch = 1;
 	}
 	elsif($_ =~ /^FT       / && $ftswitch>=1 && $ftswitch < 3 ){	#FT TRANSMEM行の後ろ2行をfteviに格納
@@ -235,26 +224,12 @@ while(<SWISS>){
 					if($swisssu =~ /isoform|Isoform/){$iso=1;}
 				}
 
+				$max = 0;
+				@hydra = (0);
 
-				if($t2eco!=255){
-					$max = 0;
-					@hydra = (0);
-
-					@sq=();
-					@sq=split(//,$swisssq);
-
-          if($fteco==269){
-            printf WRITE ">".$swissid.",".$t2eco.",".$pmeco.",".$goleco.",".$ereco.",".$fteco."\n";
-            for($i=0;$i<@sq;$i++){
-              if($i<0 || $i>=@sq){
-                printf WRITE "X";
-              }
-              else{
-                printf WRITE $sq[$i];
-              }
-            }
-            printf WRITE "\n" ;
-          }
+				if($fteco==269){
+					printf WRITE ">".$swissid.",".$t2eco.",".$pmeco.",".$goleco.",".$ereco.",".$fteco."\n";
+					printf WRITE $swisssq."\n" ;
 				}
 			}
 		}
@@ -269,7 +244,6 @@ while(<SWISS>){
 		$mito=0;
 		$nuclear=0;
 		$CCeco=0;
-		@sq = (0);
 		$U=0;
 		$ftnumber=0;
 		@su=(0);
@@ -283,8 +257,6 @@ while(<SWISS>){
 		$rafteco=0;
 		$caeco=0;
 		$sceco=0;
-		$TMRstart=0;
-		$TMRend=0;
 		$ftevi="";
 		$iso=0;
 	}

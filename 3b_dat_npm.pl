@@ -23,8 +23,8 @@ while(<SWISS>){
 	}
 
 	elsif($_ =~ /^CC   -!- SUBCELLULAR LOCATION/){
-	$suswitch = 1;
-	$swisssu .= substr($_,9,100);
+		$suswitch = 1;
+		$swisssu .= substr($_,9,100);
 	}
 	elsif($_ =~ /^CC   -!-|CC   ---/){
 		$suswitch = 0;
