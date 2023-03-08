@@ -1,5 +1,5 @@
 
-open(SWISS, "typeII.dat");
+open(SWISS, "typeII_exclusion.dat");
 
 $, = ",";
 $\ = "\n";

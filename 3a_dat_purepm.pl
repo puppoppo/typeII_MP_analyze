@@ -14,15 +14,9 @@ while(<SWISS>){
 		$swissid =~ s/\s//g;
 	}
 	 elsif($_ =~ /^DE/){
-		if($_ =~ /^DE   RecName: Full=/){
-			$swissde .= substr($_,19,100);
-		}
 		if($_ =~ /Fragment/){
 			$frag = 1;
 		}
-	}
-	elsif($_ =~ /^DR   PDB/){
-		$pdb=1;
 	}
 	elsif($_ =~ /^OC   /){
 		$swissoc .= substr($_,5,100);
@@ -66,7 +60,6 @@ while(<SWISS>){
 
 		if($swissoc =~ /Mammalia/ && $frag == 0 && $ftnumber == 1 && $U==0 ){
 			if($swisssu =~ /type II |typeII /){
-				$N = int(( $TMRstart + $TMRend -2 ) / 2);
 				@sq=split(//,$swisssq);
 
 				for($i=0;$i<@sq;$i++){
@@ -223,7 +216,6 @@ while(<SWISS>){
 						elsif($su[$i] =~ /ECO:0000213/){$sceco=213;}
 						else{$sceco=1;}
 					}
-					if($swisssu =~ /isoform|Isoform/){$iso=1;}
 					if($swisssu =~ /lysosome|Lysosome/){$lysosome=1;}
 					if($swisssu =~ /melanosome|Melanosome/){$melanosome=1;}
 					if($swisssu =~ /Lipid-anchor|GPI-anchor/){$lipidanchor=1;}
@@ -231,103 +223,19 @@ while(<SWISS>){
 
 
 				if($t2eco!=255 && $pmeco==269 && $goleco==0 && $ereco==0 && $nueco==0 && $mteco==0 && $lysosome==0 && $lipidanchor==0){
-#$pmeco==269 && $goleco==0 && $ereco==0 && $nueco==0 && $mteco==0 && $lysosome==0 && $lipidanchor==0
-#$pmeco==0
-					for($i=0;$i<@sq;$i++){
-						if($sq[$i] =~ /A/){
-							$sq[$i] = 1.8;
-						}
-						elsif($sq[$i] =~ /C/){
-							$sq[$i]=2.5;
-						}
-						elsif($sq[$i] =~ /D/){
-							$sq[$i]=-3.5;
-						}
-						elsif($sq[$i] =~ /E/){
-							$sq[$i]=-3.5;
-						}
-						elsif($sq[$i] =~ /F/){
-							$sq[$i]=2.8;
-						}
-						elsif($sq[$i] =~ /G/){
-							$sq[$i] = -0.4;
-						}
-						elsif($sq[$i] =~ /H/){
-							$sq[$i]=-3.2;
-						}
-						elsif($sq[$i] =~ /I/){
-							$sq[$i]=4.5;
-						}
-						elsif($sq[$i] =~ /K/){
-							$sq[$i]=-3.9;
-						}
-						elsif($sq[$i] =~ /L/){
-							$sq[$i]=3.8;
-						}
-						elsif($sq[$i] =~ /M/){
-							$sq[$i]=1.9;
-						}
-						elsif($sq[$i] =~ /N/){
-							$sq[$i]=-3.5;
-						}
-						elsif($sq[$i] =~ /P/){
-							$sq[$i]=-1.6;
-						}
-						elsif($sq[$i] =~ /Q/){
-							$sq[$i]=-3.5;
-						}
-						elsif($sq[$i] =~ /R/){
-							$sq[$i]=-4.5;
-						}
-						elsif($sq[$i] =~ /S/){
-							$sq[$i]=-0.8;
-						}
-						elsif($sq[$i] =~ /T/){
-							$sq[$i]=-0.7;
-						}
-						elsif($sq[$i] =~ /V/){
-							$sq[$i]=4.2;
-						}
-						elsif($sq[$i] =~ /W/){
-							$sq[$i]=-0.9;
-						}
-						elsif($sq[$i] =~ /Y/){
-							$sq[$i]=-1.3;
-						}
-						else{
-							printf "error" . $swissid . $i. "\n";
-						}
-					}
-
-					$max = 0;
-					@hydra = (0);
-
-					for($i=0;$i<@sq;$i++){
-						for($j=-7;$j<=7;$j++){
-							if($i+$j < 0){$hydra[$i]+= $A;} #無いところを＄A=0で置き換え
-							elsif($i+$j >= 0){$hydra[$i]+= $sq[$i+$j];}
-						}
-						if($hydra[$max]<$hydra[$i]){
-							$max=$i;
-						}
-					}
 
 					@sq=();
 					@sq=split(//,$swisssq);
 
-					if($NG==0){
-						printf WRITE ">".$swissid.",".$t2eco.",".$pmeco.",".$goleco.",".$ereco.","."\n";
-						for($i=0;$i<@sq;$i++){
-							printf WRITE $sq[$i];
-						}
-
-						printf WRITE "\n" ;
-
+					printf WRITE ">".$swissid.",".$t2eco.",".$pmeco.",".$goleco.",".$ereco.","."\n";
+					for($i=0;$i<@sq;$i++){
+						printf WRITE $sq[$i];
 					}
+					printf WRITE "\n" ;
+
 				}
 			}
 		}
-		$pdb=0;
 		$swissid = "";
 		$swissde = "";
 		$frag = 0;
@@ -335,11 +243,6 @@ while(<SWISS>){
 		$suswitch = 0;
 		$swisssu = "";
 		$swisssq = "";
-		$pm=0;
-		$gol=0;
-		$er=0;
-		$mito=0;
-		$nuclear=0;
 		$CCeco=0;
 		@sq = (0);
 		$U=0;
@@ -358,7 +261,6 @@ while(<SWISS>){
 		$TMRstart=0;
 		$TMRend=0;
 		$ftevi="";
-		$iso=0;
 		$lysosome=0;
 		$melanosome=0;
 		$lipidanchor=0;
