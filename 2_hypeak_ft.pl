@@ -2,6 +2,29 @@
 open(SWISS, "typeII.dat");
 open(WRITE,">2_hypeak_ft.csv");
 
+my %amino_acid_values = (
+	A => 1.8,
+	C => 2.5,
+	D => -3.5,
+	E => -3.5,
+	F => 2.8,
+	G => -0.4,
+	H => -3.2,
+	I => 4.5,
+	K => -3.9,
+	L => 3.8,
+	M => 1.9,
+	N => -3.5,
+	P => -1.6,
+	Q => -3.5,
+	R => -4.5,
+	S => -0.8,
+	T => -0.7,
+	V => 4.2,
+	W => -0.9,
+	Y => -1.3
+);
+
 $, = ",";
 $\ = "\n";
 $U=0;
@@ -15,9 +38,6 @@ while(<SWISS>){
 		$swissid =~ s/\s//g;
 	}
 	 elsif($_ =~ /^DE/){
-		if($_ =~ /^DE   RecName: Full=/){
-			$swissde .= substr($_,19,100);
-		}
 		if($_ =~ /Fragment/){
 			$frag = 1;
 		}
@@ -25,17 +45,14 @@ while(<SWISS>){
 	elsif($_ =~ /^OC   /){
 		$swissoc .= substr($_,5,100);
 	}
-
 	elsif($_ =~ /^CC   -!- SUBCELLULAR LOCATION/){
 	$suswitch = 1;
 	$swisssu .= substr($_,30,100);
 	}
-
 	elsif($_ =~ /SUBCELLULAR/){
 		$suswitch = 1;
 		$swisssu = substr($_,30,100);
 	}
-
 	elsif($_ =~ /^CC   -!-|CC   ---/){
 		$suswitch = 0;
 	}
@@ -45,8 +62,6 @@ while(<SWISS>){
 	elsif($_ =~/^FT   TRANSMEM/){
 		$ftnumber++;
 		$TMR = substr($_,21,100);
-#		$TMR = s/\s//g;
-
 		@TMRregion = split(/\.\./, $TMR);
 		$TMRstart = int($TMRregion[0]);
 		$TMRend =  int($TMRregion[1]);
@@ -66,21 +81,6 @@ while(<SWISS>){
 	}
 
 	elsif($_ =~ /^\/\//){
-		if($swisssu =~ /Cell membrane/){$pm=1;}
-		if($swisssu =~ /Golgi/){$gol=1;}
-		if($swisssu =~ /Endoplasmic/){$er=1;}
-
-		if($swisssu =~ /ECO:0000269/){$CCeco=269;}
-		elsif($swisssu =~ /ECO:0000303/){$CCeco=303;}
-		elsif($swisssu =~ /ECO:0000305/){$CCeco=305;}
-		elsif($swisssu =~ /ECO:0000250/){$CCeco=250;}
-		elsif($swisssu =~ /ECO:0000255/){$CCeco=255;}
-		elsif($swisssu =~ /ECO:0000256/){$CCeco=256;}
-		elsif($swisssu =~ /ECO:0000259/){$CCeco=259;}
-		elsif($swisssu =~ /ECO:0000312/){$CCeco=312;}
-		elsif($swisssu =~ /ECO:0000313/){$CCeco=313;}
-		elsif($swisssu =~ /ECO:0000244/){$CCeco=244;}
-		elsif($swisssu =~ /ECO:0000213/){$CCeco=213;}
 
 		if($ftevi =~ /ECO:0000269/){$FTeco=269;}
 		elsif($ftevi =~ /ECO:0000303/){$FTeco=303;}
@@ -94,77 +94,19 @@ while(<SWISS>){
 		elsif($ftevi =~ /ECO:0000244/){$FTeco=244;}
 		elsif($ftevi =~ /ECO:0000213/){$FTeco=213;}
 
-
 		if($swissoc =~ /Mammalia/ && $frag == 0 && $ftnumber == 1   && $U==0 ){
 			if($swisssu =~ /type II |typeII /){
 
-				$N = int(( $TMRstart + $TMRend -2 ) / 2);
 				@sq=split(//,$swisssq);
-				for($i=0;$i<@sq;$i++){
-					if($sq[$i] =~ /A/){
-						$sq[$i] = 1.8;
-					}
-					elsif($sq[$i] =~ /C/){
-						$sq[$i]=2.5;
-					}
-					elsif($sq[$i] =~ /D/){
-						$sq[$i]=-3.5;
-					}
-					elsif($sq[$i] =~ /E/){
-						$sq[$i]=-3.5;
-					}
-					elsif($sq[$i] =~ /F/){
-						$sq[$i]=2.8;
-					}
-					elsif($sq[$i] =~ /G/){
-						$sq[$i] = -0.4;
-					}
-					elsif($sq[$i] =~ /H/){
-						$sq[$i]=-3.2;
-					}
-					elsif($sq[$i] =~ /I/){
-						$sq[$i]=4.5;
-					}
-					elsif($sq[$i] =~ /K/){
-						$sq[$i]=-3.9;
-					}
-					elsif($sq[$i] =~ /L/){
-						$sq[$i]=3.8;
-					}
-					elsif($sq[$i] =~ /M/){
-						$sq[$i]=1.9;
-					}
-					elsif($sq[$i] =~ /N/){
-						$sq[$i]=-3.5;
-					}
-					elsif($sq[$i] =~ /P/){
-						$sq[$i]=-1.6;
-					}
-					elsif($sq[$i] =~ /Q/){
-						$sq[$i]=-3.5;
-					}
-					elsif($sq[$i] =~ /R/){
-						$sq[$i]=-4.5;
-					}
-					elsif($sq[$i] =~ /S/){
-						$sq[$i]=-0.8;
-					}
-					elsif($sq[$i] =~ /T/){
-						$sq[$i]=-0.7;
-					}
-					elsif($sq[$i] =~ /V/){
-						$sq[$i]=4.2;
-					}
-					elsif($sq[$i] =~ /W/){
-						$sq[$i]=-0.9;
-					}
-					elsif($sq[$i] =~ /Y/){
-						$sq[$i]=-1.3;
-					}
-					else{
-						printf "error" . $swissid . $i. "\n";
+
+				for (my $i = 0; $i < @sq; $i++) {
+					if (exists $amino_acid_values{$sq[$i]}) {
+						$sq[$i] = $amino_acid_values{$sq[$i]};
+					} else {
+						die "Error: unknown amino acid $sq[$i] in sequence $swissid at position $i\n";
 					}
 				}
+
 				$start = 0;
 				$end = @sq;
 				$max = $start;
@@ -184,12 +126,12 @@ while(<SWISS>){
 				$max=$max+1;	#プログラム上の残基数からuniprot上の残基数に変換
 
 				$score = 0;
-				if($TMRstart < $max && $max < $TMRend ){
+				if($TMRstart <= $max && $max <= $TMRend ){
 					$score = 1;
 				}
 				if(1){
 					$length = $TMRend - $TMRstart + 1;
-					printf WRITE ">" . $swissid . "," . $score . "," . $TMRstart . "," . $TMRend . "," . $length . "," . $N . "," . $max . "," . $pm . "," . $gol . "," . $er . "," . $CCeco . "," . $FTeco . "\n";
+					printf WRITE ">" . $swissid . "," . $score . "," . $TMRstart . "," . $TMRend . "," . $length . "," . $max . "," . $FTeco . "\n";
 					printf WRITE $swisssq . "\n" ;
 				}
 			}
@@ -204,10 +146,6 @@ while(<SWISS>){
 		$TMR = "";
 		$ftevi = "";
 		$swisssq = "";
-		$pm=0;
-		$gol=0;
-		$er=0;
-		$CCeco=0;
 		$FTeco=0;
 		$N=0;
 		@sq = (0);
