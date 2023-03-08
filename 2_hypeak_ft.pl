@@ -98,10 +98,11 @@ while(<SWISS>){
 			if($swisssu =~ /type II |typeII /){
 
 				@sq=split(//,$swisssq);
+				@sqN=();
 
 				for (my $i=0;$i<@sq;$i++) {
 					if (exists $amino_acid_values{$sq[$i]}) {
-						$sq[$i] = $amino_acid_values{$sq[$i]};
+						$sqN[$i] = $amino_acid_values{$sq[$i]};
 					} else {
 						die "Error: unknown amino acid $sq[$i] in sequence $swissid at position $i\n";
 					}

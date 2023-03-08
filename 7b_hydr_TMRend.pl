@@ -2,6 +2,29 @@
 open(fasta, "npm_98.fas");
 open(WRITE,">npm_98_hydr_end.fas");
 
+my %amino_acid_values = (
+	A => 1.8,
+	C => 2.5,
+	D => -3.5,
+	E => -3.5,
+	F => 2.8,
+	G => -0.4,
+	H => -3.2,
+	I => 4.5,
+	K => -3.9,
+	L => 3.8,
+	M => 1.9,
+	N => -3.5,
+	P => -1.6,
+	Q => -3.5,
+	R => -4.5,
+	S => -0.8,
+	T => -0.7,
+	V => 4.2,
+	W => -0.9,
+	Y => -1.3
+);
+
 $, = ",";
 $\ = "\n";
 $A=-0.49;
@@ -19,69 +42,11 @@ while(<fasta>){
 		@sq=split(//,$SEQUENCE);
 		@sqn=();
 
-		for($i=0;$i<@sq;$i++){
-			if($sq[$i] =~ /A/){
-				$sqn[$i] = 1.8;
-			}
-			elsif($sq[$i] =~ /C/){
-				$sqn[$i]=2.5;
-			}
-			elsif($sq[$i] =~ /D/){
-				$sqn[$i]=-3.5;
-			}
-			elsif($sq[$i] =~ /E/){
-				$sqn[$i]=-3.5;
-			}
-			elsif($sq[$i] =~ /F/){
-				$sqn[$i]=2.8;
-			}
-			elsif($sq[$i] =~ /G/){
-				$sqn[$i] = -0.4;
-			}
-			elsif($sq[$i] =~ /H/){
-				$sqn[$i]=-3.2;
-			}
-			elsif($sq[$i] =~ /I/){
-				$sqn[$i]=4.5;
-			}
-			elsif($sq[$i] =~ /K/){
-				$sqn[$i]=-3.9;
-			}
-			elsif($sq[$i] =~ /L/){
-				$sqn[$i]=3.8;
-			}
-			elsif($sq[$i] =~ /M/){
-				$sqn[$i]=1.9;
-			}
-			elsif($sq[$i] =~ /N/){
-				$sqn[$i]=-3.5;
-			}
-			elsif($sq[$i] =~ /P/){
-				$sqn[$i]=-1.6;
-			}
-			elsif($sq[$i] =~ /Q/){
-				$sqn[$i]=-3.5;
-			}
-			elsif($sq[$i] =~ /R/){
-				$sqn[$i]=-4.5;
-			}
-			elsif($sq[$i] =~ /S/){
-				$sqn[$i]=-0.8;
-			}
-			elsif($sq[$i] =~ /T/){
-				$sqn[$i]=-0.7;
-			}
-			elsif($sq[$i] =~ /V/){
-				$sqn[$i]=4.2;
-			}
-			elsif($sq[$i] =~ /W/){
-				$sqn[$i]=-0.9;
-			}
-			elsif($sq[$i] =~ /Y/){
-				$sqn[$i]=-1.3;
-			}
-			else{
-				printf "error" . $temp . $i. "\n";
+		for (my $i=0;$i<@sq;$i++) {
+			if (exists $amino_acid_values{$sq[$i]}) {
+				$sqn[$i] = $amino_acid_values{$sq[$i]};
+			} else {
+				die "Error: unknown amino acid $sq[$i] in sequence $swissid at position $i\n";
 			}
 		}
 
@@ -98,11 +63,7 @@ while(<fasta>){
 			}
 		}
 
-
-
-
 		$start=$max+20;
-
 		$defmax=$start;
 		@hydra = (0);
 		@hy_N = (0);
@@ -149,7 +110,6 @@ while(<fasta>){
 		}
 
 		printf WRITE "\n";
-
 
 	}
 }
