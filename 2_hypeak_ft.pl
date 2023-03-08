@@ -99,7 +99,7 @@ while(<SWISS>){
 
 				@sq=split(//,$swisssq);
 
-				for (my $i = 0; $i < @sq; $i++) {
+				for (my $i=0;$i<@sq;$i++) {
 					if (exists $amino_acid_values{$sq[$i]}) {
 						$sq[$i] = $amino_acid_values{$sq[$i]};
 					} else {

@@ -2,6 +2,29 @@
 open(fasta, "FT269_250.fas");
 open(WRITE,">FT269_250_TMR.fas");
 
+my %amino_acid_values = (
+	A => 1.8,
+	C => 2.5,
+	D => -3.5,
+	E => -3.5,
+	F => 2.8,
+	G => -0.4,
+	H => -3.2,
+	I => 4.5,
+	K => -3.9,
+	L => 3.8,
+	M => 1.9,
+	N => -3.5,
+	P => -1.6,
+	Q => -3.5,
+	R => -4.5,
+	S => -0.8,
+	T => -0.7,
+	V => 4.2,
+	W => -0.9,
+	Y => -1.3
+);
+
 $, = ",";
 $\ = "\n";
 
@@ -16,69 +39,11 @@ while(<fasta>){
 		$SEQUENCE=substr($_,0,10000);
 		@sq=split(//,$SEQUENCE);
 
-		for($i=0;$i<@sq;$i++){
-			if($sq[$i] =~ /A/){
-				$sq[$i] = 1.8;
-			}
-			elsif($sq[$i] =~ /C/){
-				$sq[$i]=2.5;
-			}
-			elsif($sq[$i] =~ /D/){
-				$sq[$i]=-3.5;
-			}
-			elsif($sq[$i] =~ /E/){
-				$sq[$i]=-3.5;
-			}
-			elsif($sq[$i] =~ /F/){
-				$sq[$i]=2.8;
-			}
-			elsif($sq[$i] =~ /G/){
-				$sq[$i] = -0.4;
-			}
-			elsif($sq[$i] =~ /H/){
-				$sq[$i]=-3.2;
-			}
-			elsif($sq[$i] =~ /I/){
-				$sq[$i]=4.5;
-			}
-			elsif($sq[$i] =~ /K/){
-				$sq[$i]=-3.9;
-			}
-			elsif($sq[$i] =~ /L/){
-				$sq[$i]=3.8;
-			}
-			elsif($sq[$i] =~ /M/){
-				$sq[$i]=1.9;
-			}
-			elsif($sq[$i] =~ /N/){
-				$sq[$i]=-3.5;
-			}
-			elsif($sq[$i] =~ /P/){
-				$sq[$i]=-1.6;
-			}
-			elsif($sq[$i] =~ /Q/){
-				$sq[$i]=-3.5;
-			}
-			elsif($sq[$i] =~ /R/){
-				$sq[$i]=-4.5;
-			}
-			elsif($sq[$i] =~ /S/){
-				$sq[$i]=-0.8;
-			}
-			elsif($sq[$i] =~ /T/){
-				$sq[$i]=-0.7;
-			}
-			elsif($sq[$i] =~ /V/){
-				$sq[$i]=4.2;
-			}
-			elsif($sq[$i] =~ /W/){
-				$sq[$i]=-0.9;
-			}
-			elsif($sq[$i] =~ /Y/){
-				$sq[$i]=-1.3;
-			}
-			else{
-				printf "error" . $temp . $i. "\n";
+		for (my $i=0;$i<@sq;$i++) {
+			if (exists $amino_acid_values{$sq[$i]}) {
+				$sq[$i] = $amino_acid_values{$sq[$i]};
+			} else {
+				die "Error: unknown amino acid $sq[$i] in sequence $swissid at position $i\n";
 			}
 		}
 
@@ -105,7 +70,6 @@ while(<fasta>){
 				printf WRITE $sq[$i];
 			}
 		}
-
 		printf WRITE "\n";
 
 	}
