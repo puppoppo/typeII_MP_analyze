@@ -2,6 +2,52 @@
 open(fasta, "npm_98.fas");
 open(WRITE,">npm_98_amph_start.csv");
 
+my %amino_acid_values = (
+	A => 1.8,
+	C => 2.5,
+	D => -3.5,
+	E => -3.5,
+	F => 2.8,
+	G => -0.4,
+	H => -3.2,
+	I => 4.5,
+	K => -3.9,
+	L => 3.8,
+	M => 1.9,
+	N => -3.5,
+	P => -1.6,
+	Q => -3.5,
+	R => -4.5,
+	S => -0.8,
+	T => -0.7,
+	V => 4.2,
+	W => -0.9,
+	Y => -1.3
+);
+
+my %amino_amph_values = (
+	A => 0,
+	C => 0,
+	D => 0,
+	E => 1.27,
+	F => 0,
+	G => 0,
+	H => 1.45,
+	I => 0,
+	K => 3.67,
+	L => 0,
+	M => 0,
+	N => 0,
+	P => 0,
+	Q => 1.25,
+	R => 2.45,
+	S => 0,
+	T => 0,
+	V => 0,
+	W => 6.93,
+	Y => 5.06
+);
+
 $, = ",";
 $\ = "\n";
 $A=-0.49;
@@ -20,135 +66,19 @@ while(<fasta>){
 		@sqn=();
 		@sqA=();
 
-		for($i=0;$i<@sq;$i++){
-			if($sq[$i] =~ /A/){
-				$sqn[$i] = 1.8;
-			}
-			elsif($sq[$i] =~ /C/){
-				$sqn[$i]=2.5;
-			}
-			elsif($sq[$i] =~ /D/){
-				$sqn[$i]=-3.5;
-			}
-			elsif($sq[$i] =~ /E/){
-				$sqn[$i]=-3.5;
-			}
-			elsif($sq[$i] =~ /F/){
-				$sqn[$i]=2.8;
-			}
-			elsif($sq[$i] =~ /G/){
-				$sqn[$i] = -0.4;
-			}
-			elsif($sq[$i] =~ /H/){
-				$sqn[$i]=-3.2;
-			}
-			elsif($sq[$i] =~ /I/){
-				$sqn[$i]=4.5;
-			}
-			elsif($sq[$i] =~ /K/){
-				$sqn[$i]=-3.9;
-			}
-			elsif($sq[$i] =~ /L/){
-				$sqn[$i]=3.8;
-			}
-			elsif($sq[$i] =~ /M/){
-				$sqn[$i]=1.9;
-			}
-			elsif($sq[$i] =~ /N/){
-				$sqn[$i]=-3.5;
-			}
-			elsif($sq[$i] =~ /P/){
-				$sqn[$i]=-1.6;
-			}
-			elsif($sq[$i] =~ /Q/){
-				$sqn[$i]=-3.5;
-			}
-			elsif($sq[$i] =~ /R/){
-				$sqn[$i]=-4.5;
-			}
-			elsif($sq[$i] =~ /S/){
-				$sqn[$i]=-0.8;
-			}
-			elsif($sq[$i] =~ /T/){
-				$sqn[$i]=-0.7;
-			}
-			elsif($sq[$i] =~ /V/){
-				$sqn[$i]=4.2;
-			}
-			elsif($sq[$i] =~ /W/){
-				$sqn[$i]=-0.9;
-			}
-			elsif($sq[$i] =~ /Y/){
-				$sqn[$i]=-1.3;
-			}
-			else{
-				printf "error" . $temp . $i. "\n";
+		for (my $i=0;$i<@sq;$i++) {
+			if (exists $amino_acid_values{$sq[$i]}) {
+				$sqn[$i] = $amino_acid_values{$sq[$i]};
+			} else {
+				die "Error: unknown amino acid $sq[$i] in sequence $swissid at position $i\n";
 			}
 		}
 
-		for($i=0;$i<@sq;$i++){
-			if($sq[$i] =~ /A/){
-				$sqA[$i]=0;
-			}
-			elsif($sq[$i] =~ /C/){
-				$sqA[$i]=0;
-			}
-			elsif($sq[$i] =~ /D/){
-				$sqA[$i]=0;
-			}
-			elsif($sq[$i] =~ /E/){
-				$sqA[$i]=1.27;
-			}
-			elsif($sq[$i] =~ /F/){
-				$sqA[$i]=0;
-			}
-			elsif($sq[$i] =~ /G/){
-				$sqA[$i]=0;
-			}
-			elsif($sq[$i] =~ /H/){
-				$sqA[$i]=1.45;
-			}
-			elsif($sq[$i] =~ /I/){
-				$sqA[$i]=0;
-			}
-			elsif($sq[$i] =~ /K/){
-				$sqA[$i]=3.67;
-			}
-			elsif($sq[$i] =~ /L/){
-				$sqA[$i]=0;
-			}
-			elsif($sq[$i] =~ /M/){
-				$sqA[$i]=0;
-			}
-			elsif($sq[$i] =~ /N/){
-				$sqA[$i]=0;
-			}
-			elsif($sq[$i] =~ /P/){
-				$sqA[$i]=0;
-			}
-			elsif($sq[$i] =~ /Q/){
-				$sqA[$i]=1.25;
-			}
-			elsif($sq[$i] =~ /R/){
-				$sqA[$i]=2.45;
-			}
-			elsif($sq[$i] =~ /S/){
-				$sqA[$i]=0;
-			}
-			elsif($sq[$i] =~ /T/){
-				$sqA[$i]=0;
-			}
-			elsif($sq[$i] =~ /V/){
-				$sqA[$i]=0;
-			}
-			elsif($sq[$i] =~ /W/){
-				$sqA[$i]=6.93;
-			}
-			elsif($sq[$i] =~ /Y/){
-				$sqA[$i]=5.06;
-			}
-			else{
-				printf "error" . $temp . $i. "\n";
+		for (my $i=0;$i<@sq;$i++) {
+			if (exists $amino_amph_values{$sq[$i]}) {
+				$sqA[$i] = $amino_amph_values{$sq[$i]};
+			} else {
+				die "Error: unknown amino acid $sq[$i] in sequence $swissid at position $i\n";
 			}
 		}
 
